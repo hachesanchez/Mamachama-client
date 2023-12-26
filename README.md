@@ -1,8 +1,23 @@
-# React + Vite
+# Mamachama-client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| URL                               | Description                                | Protected          |
+| --------------------------------- | ------------------------------------------ | ------------------ |
+| `/`                               | Home page                                  |                    |
+| `/login`                          | Login page                                 |                    |
+| `/contacta`                       | Contact page                               |                    |
+| `/somos`                          | About Page                                 |                    |
+| `/somos/nuestro-equipo`           | Get to know the team page                  |                    |
+| `/hacemos`                        | Actions list page                          |                    |
+| `/hacemos/proyectos`              | Projects list page                         |                    |
+| `/hacemos/crear-proyecto`         | Create a new project page                  | Admin, User        |
+| `/hacemos/proyectos/:id`          | Project details page                       |                    |
+| `/hacemos/proyectos/:id/editar`   | Edit a specific project page               | Admin, User        |
+| `/blog`                           | Blog page                                  |                    |
+| `/blog/crear-post`                | Blog create a post page                    | Admin, User        |
+| `/blog/:id`                       | Blog details of a specific post's page     |                    |
+| `/blog/:id/editar`                | Edit a specific post's page                | Admin, User        |
+| `/colabora`                       | Collaborate page                           |                    |
+| `/colabora/catering`              | Collaborate with the catering page         |                    |
+| `/colabora/invisibilizadas`       | Collaborate with the book page             |                    |
+| `/politica-de-privacidad`         | Privacy policy page                        |                    |
+| `/politica-de-cookies`            | Cookies policy page                        |                    |
