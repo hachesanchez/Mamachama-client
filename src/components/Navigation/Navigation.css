@@ -1,0 +1,44 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.navbar-custom {
+    width: 100%;
+    transition: background-color 0.2s ease;
+    color: #5c1116;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+.navbar-scrolled {
+    background-color: #073763;
+    /* background-color: rgba(239, 239, 239, 1); */
+    /* color: #073763; */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #5c1116
+}
+
+.navbar-custom .toggle {
+    filter: invert(1);
+    transition: color 0.2s ease;
+}
+
+.navbar-scrolled .navbar-toggler-icon {
+    filter: invert(1);
+    transition: color 0.2s ease;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.nav-link.active {
+    color: #fff193;
+}
+
+.navbar-nav .nav-item.dropdown {
+    color: #fff193;
+
+}
