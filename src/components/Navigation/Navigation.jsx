@@ -1,10 +1,20 @@
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown, Form, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from "react-scroll";
-
+import searchIcon from '../../assets/icons/icon-search.png'
 import './Navigation.css'
+import { useState } from 'react';
 
 function Navigation() {
+
+    const [displayInput, setDisplayInput] = useState(false)
+
+    const handleInput = () => {
+        setDisplayInput(!displayInput)
+    }
+
+    const [hoveredLink, setHoveredLink] = useState(false)
+
 
     return (
 
@@ -13,21 +23,16 @@ function Navigation() {
             className={`navbar-custom`}
             fixed='top'>
 
-            <Container>
+            <Navbar.Brand as={Link} to={'/'} className='nav-brand'> MAMACHAMA </Navbar.Brand>
 
-                <Navbar.Brand as={Link} to={'/'} > MAMACHAMA </Navbar.Brand>
+            <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                className={`toggle`} />
 
-                <Navbar.Toggle
-                    aria-controls="basic-navbar-nav"
-                    className={`toggle`} />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto main-links">
 
-
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-
-                        <Nav.Link as={Link} to={'/contacta'}>contacta</Nav.Link>
-
-                        <div className="nav-link">
+                    {/* <div className="nav-link">
                             <ScrollLink
                                 to="contact-section"
                                 smooth={true}
@@ -35,50 +40,95 @@ function Navigation() {
                                 className="nav-link"
                                 style={{ cursor: 'pointer' }}
                             >
-                                contact
+                                contacta
                             </ScrollLink>
-                        </div>
+                        </div> */}
 
-                        <NavDropdown title="somos" id="basic-nav-dropdown">
-                            <NavDropdown.Item
-                                as={Link}
-                                to={'/somos/sobre-mamachama'}
-                                className='drop down-item'
+                    <NavDropdown title="SOMOS" id="basic-nav-dropdown">
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/somos/sobre-mamachama'}
+                            className='drop down-item'
+                        >
+                            Sobre Mamachama
+                        </NavDropdown.Item>
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/somos/nuestro-equipo'}
+                            className='dropdown-item'
+                        >
+                            Nuestro equipo
+                        </NavDropdown.Item>
+                    </NavDropdown>
+
+                    <NavDropdown title="HACEMOS" id="basic-nav-dropdown">
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/hacemos/acciones'}
+                            className='drop down-item'
+                        >
+                            ¿Qué hacemos?
+                        </NavDropdown.Item>
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/hacemos/proyectos'}
+                            className='dropdown-item'
+                        >
+                            Proyectos
+                        </NavDropdown.Item>
+                    </NavDropdown>
+
+                    <NavDropdown title="COLABORA" id="basic-nav-dropdown">
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/colabora/invisibilizadas'}
+                            className='drop down-item'
+                        >
+                            Libro "Invisibilizadas"
+                        </NavDropdown.Item>
+                        <NavDropdown.Item
+                            as={Link}
+                            to={'/colabora/catering'}
+                            className='dropdown-item'
+                        >
+                            Catering saludable
+                        </NavDropdown.Item>
+                    </NavDropdown>
+
+                    <Nav.Link as={Link} to={'/contacta'} className='nav-link'>CONTACTA</Nav.Link>
+                </Nav>
+
+
+
+                <Form className='search-form'>
+                    <Row className={`${displayInput ? 'search' : 'search-no-border'}`}>
+                        <Col xs="auto" className={`${displayInput ? 'search-button' : 'hidden'}`}>
+                            <Button
+                                type="button"
+                                className="sm"
+                                variant="link"
+                                onClick={handleInput}
                             >
-                                Sobre Mamachama
-                            </NavDropdown.Item>
-                            <NavDropdown.Item
-                                as={Link}
-                                to={'/somos/nuestro-equipo'}
-                                className='dropdown-item'
-                            >
-                                Nuestro equipo
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                                <img className="search-icon" src={searchIcon} alt="Search" />
+                            </Button>
+                        </Col>
+                        {displayInput && (
+                            <Col xs="auto">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Buscar"
+                                    className="mx-1 search-input"
+                                />
+                            </Col>
+                        )}
+                    </Row>
+                </Form>
 
-                        <NavDropdown title="hacemos" id="basic-nav-dropdown">
-                            <NavDropdown.Item
-                                as={Link}
-                                to={'/hacemos/sobre-mamachama'}
-                                className='drop down-item'
-                            >
-                                ¿Qué hacemos?
-                            </NavDropdown.Item>
-                            <NavDropdown.Item
-                                as={Link}
-                                to={'/hacemos/proyectos'}
-                                className='dropdown-item'
-                            >
-                                Proyectos
-                            </NavDropdown.Item>
-                        </NavDropdown>
+            </Navbar.Collapse>
 
-                    </Nav>
-                </Navbar.Collapse>
 
-            </Container>
 
-        </Navbar>
+        </Navbar >
     )
 }
 

@@ -1,0 +1,19 @@
+.Footer {
+    clear: both;
+    position: relative;
+    margin-top: 20px;
+    background-color: #5C1116;
+    padding: 50px 20px;
+    padding-bottom: 100px;
+    color: #fff;
+    height: 300px;
+}
+
+.footer-sections {
+    max-width: 750px;
+}
+
+.footer-container {
+    display: block;
+
+}
