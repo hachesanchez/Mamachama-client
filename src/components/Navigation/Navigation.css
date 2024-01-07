@@ -8,8 +8,7 @@ body {
     color: #5c1116;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
     background-color: white;
-    height: 80px;
-
+    height: 70px;
 }
 
 .navbar-custom .navbar-brand,
@@ -22,15 +21,33 @@ body {
 }
 
 .navbar-custom .toggle {
-    filter: invert(1);
-    transition: color 0.2s ease;
+    margin-right: 20px;
 }
 
+#basic-navbar-nav {
+    background-color: #fff;
+    height: 70px;
+    margin-right: 100px;
+    margin-left: 0px;
+}
 
-/* .navbar-scrolled .navbar-toggler-icon {
-    filter: invert(1);
-    transition: color 0.2s ease;
+@media (max-width: 991px) {
+    #basic-navbar-nav {
+        height: auto;
+        padding-bottom: 30px;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 20px;
+    }
+}
+
+/* .navbar-collapse {
+    background-color: #fff;
+    padding: 20px;
 } */
+
+
 #basic-nav-dropdown:hover {
     background-color: #5c11160e;
 }
@@ -40,24 +57,26 @@ body {
 }
 
 .nav-link {
-    padding: 30px;
-    font-weight: 800;
-    font-family: monospace;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-stretch: condensed;
     font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px
 }
 
-/* .nav-link.active {
-    color: #947C80;
+@media (max-width: 991px) {
+    .nav-link {
+        margin-right: 0px;
+        margin-left: 0px
+    }
 }
 
-.navbar-nav .nav-item.dropdown {
-    color: #947C80;
-} */
-
-.main-links {
-    margin-right: 200px;
+.navbar-custom .dropdown-item:active,
+.navbar-custom .dropdown-item.active {
+    background-color: #947C80;
 }
+
 
 .search-form {
     display: flex;
@@ -73,6 +92,13 @@ body {
 .search {
     align-items: center;
     border: 0.5px solid grey;
+    margin-left: 30px;
+}
+
+@media (max-width: 991px) {
+    .search {
+        margin-left: 0px
+    }
 }
 
 .search-icon {
@@ -91,4 +117,8 @@ body {
     outline: none;
     font-size: 14px;
     padding: 0;
+}
+
+.dropdown-menu.show {
+    display: inline-grid;
 }
