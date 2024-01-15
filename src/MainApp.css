@@ -4,4 +4,13 @@
 
 body {
   background-color: rgba(239, 239, 239, 1);
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #474747;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
