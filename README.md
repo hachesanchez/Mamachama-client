@@ -5,7 +5,7 @@
 | `/`                               | Home page                                  |                    |
 | `/login`                          | Login page                                 |                    |
 | `/contacta`                       | Contact page                               |                    |
-| `/somos/sobre-mamachama`                   | About Page                                 |                    |
+| `/somos/sobre-mamachama`          | About Page                                 |                    |
 | `/somos/nuestro-equipo`           | Get to know the team page                  |                    |
 | `/hacemos/proyectos`              | Projects list page                         |                    |
 | `/hacemos/crear-proyecto`         | Create a new project page                  | Admin, User        |
