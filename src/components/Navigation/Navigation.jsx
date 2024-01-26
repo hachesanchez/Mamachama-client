@@ -2,10 +2,14 @@ import { Navbar, Nav, Container, NavDropdown, Form, Row, Col, Button } from 'rea
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from "react-scroll";
 import searchIcon from '../../assets/icons/icon-search.png'
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/auth.context';
 import './Navigation.css'
-import { useState } from 'react';
+
 
 function Navigation() {
+
+    const { user, logout } = useContext(AuthContext)
 
     const [displayInput, setDisplayInput] = useState(false)
 
@@ -96,8 +100,23 @@ function Navigation() {
                     </NavDropdown>
 
                     <Nav.Link as={Link} to={'/contacta'} className='nav-link'>CONTACTA</Nav.Link>
-                </Nav>
 
+                    {user &&
+                        <>
+                            <Navbar.Brand as={Link} to="/perfil" className='nav-link-greeting' >
+                                <img src={user?.avatar} alt="avatar" width="40" height="40" className="nav-avatar rounded-circle" />
+                            </Navbar.Brand>
+                            <NavDropdown title="" id="basic-nav-dropdown">
+                                <NavDropdown.Item
+                                    onClick={logout}
+                                    className='drop down-item'
+                                >Cerrar Sesión
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        </>
+                    }
+
+                </Nav>
 
 
                 <Form className='search-form'>
@@ -124,8 +143,8 @@ function Navigation() {
                     </Row>
                 </Form>
 
-            </Navbar.Collapse>
 
+            </Navbar.Collapse>
 
 
         </Navbar >

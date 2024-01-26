@@ -1,0 +1,22 @@
+.privacy-component.show .showFullContent {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.policy-box {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.policy-title :hover {
+    cursor: pointer;
+}
+
+.privacy-text-dropdown {
+    font-size: 14px;
+}
+
+.privacy-text-short {
+    font-size: 12px;
+}

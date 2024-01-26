@@ -3,11 +3,12 @@ import { AuthContext } from "../../contexts/auth.context.jsx"
 import { Form, Button } from "react-bootstrap"
 import { useState, useContext } from "react"
 import authService from "../../services/auth.services.js"
+import FormError from "../FormError/FormError.jsx"
 
 
 function LoginForm() {
 
-    // const [errors, setErrors] = useState([])
+    const [errors, setErrors] = useState([])
 
     const [loginData, setLoginData] = useState({
         email: '',
@@ -35,7 +36,7 @@ function LoginForm() {
                 navigate('/')
             })
             .catch(err => console.log(err))
-        // .catch(err => setErrors([err.response.data.message]))
+            .catch(err => setErrors([err.response.data.message]))
     }
 
     const { password, email } = loginData
@@ -55,7 +56,7 @@ function LoginForm() {
                     <Form.Control type="password" value={password} onChange={handleInputChange} name="password" />
                 </Form.Group>
 
-                {/* {errors.length > 0 && <FormError>{errors.map((elm, i) => <p key={i}>{elm}</p>)}</FormError>} */}
+                {errors.length > 0 && <FormError>{errors.map((elm, i) => <p key={i}>{elm}</p>)}</FormError>}
 
                 <div className="d-grid">
                     <Button className='mb-3 mt-3' variant="secondary" type="submit" >

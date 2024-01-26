@@ -15,6 +15,7 @@
 | `/blog/crear-post`                | Blog create a post page                    | Admin, User        |
 | `/blog/:id`                       | Blog details of a specific post's page     |                    |
 | `/blog/:id/editar`                | Edit a specific post's page                | Admin, User        |
+| `/perfil`                         | Visit your own profile                     | Admin, User        |
 | `/colabora/catering`              | Collaborate with the catering page         |                    |
 | `/colabora/invisibilizadas`       | Collaborate with the book page             |                    |
 | `/politica-de-privacidad`         | Privacy policy page                        |                    |

@@ -8,11 +8,11 @@ function LoginPage() {
 
         <>
             <div className="login-page-container">
-                <Container>
 
+                <div className="login-form-component">
                     <LoginForm />
+                </div>
 
-                </Container>
             </div>
         </>
     )

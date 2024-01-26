@@ -4,7 +4,7 @@
 
 body {
   background-color: rgba(239, 239, 239, 1);
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 h1 {
@@ -14,3 +14,25 @@ h1 {
   color: #474747;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: #5C1116;
+}
+
+a:hover {
+  color: #8F363C
+}
+
+
+
+/* 
+COLOR PALETTE
+- Dark (footer, links, nav): #5C1116
+- Mid: #8F363C
+- Light (page title background): #C27076
+- Lighter : #F5BFC3
+- Grey: #888
+- Background color: rgba(239, 239, 239, 1)
+- h1 (titles): #474747;
+ */

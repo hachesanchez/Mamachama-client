@@ -1,4 +1,14 @@
 .login-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 100px;
     margin-top: 150px;
+}
+
+.login-form-component {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+
 }

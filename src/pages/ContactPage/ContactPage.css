@@ -1,3 +1,19 @@
+.contact {
+    /* margin-top: 50px; */
+    margin-bottom: 70px;
+}
+
+.contact-title {
+    background-color: #C27076
+}
+
+.contact-title-text {
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+    margin-left: 30px;
+}
+
 .contact-form-component {
     margin-top: 20px;
     margin-bottom: 30px;
