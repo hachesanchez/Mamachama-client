@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import Profile from '../../components/ProfileComponents/Profile'
 import { AuthContext } from '../../contexts/auth.context'
+import Profile from '../../components/ProfileComponents/Profile'
 import './ProfilePage.css'
 
 
@@ -12,6 +12,7 @@ function ProfilePage() {
 
         <>
             <Profile user={user} />
+            SECCIÓN MIS PROYECTOS
             {/* {console.log('user del prof PAGE----', user)} */}
         </>
 

@@ -1,0 +1,17 @@
+.profile-card {
+    margin-top: 100px;
+}
+
+@media (max-width: 991px) {
+    .profile-card {
+        display: flex;
+        justify-items: center;
+    }
+}
+
+.profile-avatar {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}

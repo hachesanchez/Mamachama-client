@@ -1,14 +1,21 @@
 import { Link } from 'react-router-dom'
 import './PrivacyPolicyShort.css'
 import { useState } from 'react'
+import { Modal } from 'react-bootstrap'
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
 
-function PrivacyPolicyShort() {
+function PrivacyPolicyShort({ handlePolicyModal }) {
 
     const [showPolicyBox, setShowPolicyBox] = useState(false)
+    // const [modalShow, setModalShow] = useState(false)
 
     const toggleContent = () => {
         setShowPolicyBox(!showPolicyBox)
     }
+
+    // const handlePolicyModal = () => {
+    //     setModalShow(true)
+    // }
 
     const dropArrow = showPolicyBox ? '▲' : '▶'
 
@@ -27,15 +34,23 @@ function PrivacyPolicyShort() {
                     <p className="privacy-text-short">
                         Responsable: Mamachama
                         <br />
-                        Finalidad de la recogida y tratamiento de los datos personales: gestionar la solicitud que realizas en este formulario de contacto.
+                        Finalidad de la recogida y tratamiento de los datos personales: gestionar la solicitud que realizas en este formulario
+                        de contacto.
                         <br />
-                        Derechos: Podrás ejercer tus derechos de acceso, rectificación, limitación y suprimir los datos en somos@mamachama.com, así como el derecho a presentar una reclamación ante una autoridad de control.
+                        Derechos: Podrás ejercer tus derechos de acceso, rectificación, limitación y suprimir los datos en somos@mamachama.com,
+                        así como el derecho a presentar una reclamación ante una autoridad de control.
                         <br />
-                        Información adicional: En mi <Link to={'/politica-de-privacidad'}> política de privacidad </Link>encontrarás información adicional sobre la recopilación y el uso de su información personal. Incluida información sobre acceso, conservación, rectificación, eliminación, seguridad y otros temas.
+                        Información adicional: En mi <Link onClick={handlePolicyModal}> política de privacidad </Link>encontrarás
+                        información adicional sobre la recopilación y el uso de su información personal. Incluida información sobre acceso,
+                        conservación, rectificación, eliminación, seguridad y otros temas.
                     </p>
                 </div>
 
             </div>
+
+
+
+
         </>
     )
 }

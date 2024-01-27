@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Form, FormGroup, Row, Col, Button, Container } from "react-bootstrap";
+import { Form, FormGroup, Col, Button } from "react-bootstrap";
 import './ContactForm.css'
+import { Link } from "react-router-dom";
 
-function ContactForm() {
+function ContactForm({ handlePolicyModal }) {
+
     const [state, handleSubmit] = useForm("xeqyqwdz");
     const [isBoxChecked, setIsBoxChecked] = useState(false);
 
@@ -38,7 +40,9 @@ function ContactForm() {
                 <Form.Group className="mb-3 mt-3" controlId="formBasicCheckbox">
                     <Form.Check
                         type='checkbox'
-                        label={<span>He leído y acepto la <a href='/politica-de-privacidad' target="_blank" rel="noopener noreferrer">política de privacidad</a></span>}
+                        label={<span>He leído y acepto la <Link onClick={handlePolicyModal}>política de privacidad</Link></span>}
+                        //  label={<span>He leído y acepto la <Link to={'/politica-de-privacidad'}>política de privacidad</Link></span>}
+                        className={'check-label'}
                         onChange={handleCheckbox}
                     />
                 </Form.Group>
