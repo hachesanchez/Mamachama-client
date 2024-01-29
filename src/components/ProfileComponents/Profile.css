@@ -2,16 +2,46 @@
     margin-top: 100px;
 }
 
-@media (max-width: 991px) {
-    .profile-card {
-        display: flex;
-        justify-items: center;
-    }
-}
-
 .profile-avatar {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.profile-greeting {
+    margin-bottom: 30px;
+}
+
+.profile-avatarButtons {
+    align-items: center;
+}
+
+.profile-button {
+    width: 150px;
+}
+
+@media (max-width: 991px) {
+
+    ¡ .profile-greeting {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .profile-avatarButtons {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .profile-buttons {
+        margin-top: 20px;
+    }
+
+    .profile-button {
+        display: block;
+        width: 150px;
+        margin-bottom: 10px;
+    }
 }

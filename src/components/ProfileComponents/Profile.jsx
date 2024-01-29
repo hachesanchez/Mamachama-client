@@ -1,39 +1,45 @@
 import { Button, Container, Image, Row, Col } from 'react-bootstrap';
 import './Profile.css';
+import { useNavigate } from 'react-router-dom';
 
-function Profile({ user }) {
+function Profile({ user, logout }) {
 
     if (!user) {
         return null;
     }
 
     const { username, email, avatar } = user;
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        logout()
+        navigate('/')
+    }
 
     return (
         <>
             <Container>
                 <div className="profile-card">
 
-                    <h2 className="profile-title">¡hola {username}!</h2>
-                    <Row>
+                    <div className="profile-greeting">
+                        <h2 className="profile-title">¡hola {username}!</h2>
+                    </div>
+
+                    <Row className='profile-avatarButtons'>
                         <Col lg={3}>
                             <Image className='profile-avatar' src={avatar} alt="Profile picture" roundedCircle />
                         </Col>
                         <Col lg={9}>
-                            <Button variant="outline-secondary">Editar perfil</Button>{' '}
-                            <Button variant="outline-secondary">Proyecto nuevo</Button>{' '}
-                            <Button variant="outline-secondary">Añadir usuario</Button>{' '}
-                            <Button variant="outline-secondary">Cerrar sesión</Button>{' '}
+                            <div className="profile-buttons">
+                                <Button variant="outline-secondary profile-button">Editar perfil</Button>{' '}
+                                <Button variant="outline-secondary profile-button">Proyecto nuevo</Button>{' '}
+                                <Button variant="outline-secondary profile-button">Añadir usuario</Button>{' '}
+                                <Button variant="outline-secondary profile-button" onClick={handleLogout}>Cerrar sesión</Button>{' '}
+                            </div>
                         </Col>
                     </Row>
 
-
-
                 </div>
-
-                <hr />
-                --------------------
-                SECCIÓN: MIS PROYECTOS AÑADIDOS
             </Container>
         </>
     );
