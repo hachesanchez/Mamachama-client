@@ -28,6 +28,8 @@
      align-items: flex-start;
      text-align: left;
      color: #d6b0b7;
+     font-family: 'Oswald', sans-serif;
+     font-size: 17px;
      font-weight: 600;
  }
 
@@ -48,6 +50,8 @@
          justify-content: start;
          align-items: flex-start;
          justify-items: left;
+         font-size: 16px;
+         font-weight: 500px;
      }
  }
 

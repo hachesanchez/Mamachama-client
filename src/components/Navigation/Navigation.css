@@ -11,9 +11,16 @@ body {
     height: 70px;
 }
 
-.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand {
+    color: #5c1116;
+}
+
+
 .navbar-custom .nav-link {
-    color: #5c1116
+    color: #5c1116;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .nav-brand {

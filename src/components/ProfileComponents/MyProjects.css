@@ -1,4 +1,47 @@
 .my-projects-title {
     font-size: 17px;
     font-weight: bold;
+    /* font-family: 'Barlow', sans-serif; */
+}
+
+.my-project-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.my-project-card:hover {
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.my-project-card-title {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.my-project-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.my-project-card-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.my-project-card-date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.my-project-card-tags {
+    display: inline;
+    text-decoration: none;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+    margin-top: 2px;
 }

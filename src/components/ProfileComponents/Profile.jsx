@@ -26,10 +26,10 @@ function Profile({ user, logout }) {
                     </div>
 
                     <Row className='profile-avatarButtons'>
-                        <Col lg={3}>
+                        <Col lg={3} md={3} sm={6} xs={6} >
                             <Image className='profile-avatar' src={avatar} alt="Profile picture" roundedCircle />
                         </Col>
-                        <Col lg={9}>
+                        <Col lg={9} md={9} sm={6} xs={6}>
                             <div className="profile-buttons">
                                 <Button variant="outline-secondary profile-button">Editar perfil</Button>{' '}
                                 <Button variant="outline-secondary profile-button">Proyecto nuevo</Button>{' '}

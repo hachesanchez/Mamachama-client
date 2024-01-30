@@ -47,21 +47,6 @@ class UserService {
 
 }
 
-const authService = new UserService()
-export default authService
+const userService = new UserService()
+export default userService
 
-// getAllUsers,
-//     getOneUser,
-//     getMamachama,
-//     getCollaborators,
-//     getPartner,
-//     editUser,
-//     deleteUser
-
-// router.get('/getAllUsers', getAllUsers)
-// router.get('/getOneUser/:id', getOneUser)
-// router.get('/getMamachama', getMamachama)
-// router.get('/getCollaborators', getCollaborators)
-// router.get('/getPartner', getPartner)
-// router.put('/edit/:id', isAuthenticated, editUser)
-// router.delete('/delete/:id', isAuthenticated, deleteUser)
