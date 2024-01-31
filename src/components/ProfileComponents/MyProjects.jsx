@@ -1,5 +1,5 @@
-import { Container, Card, Button, Badge } from 'react-bootstrap'
-import './MyProjects.css'
+import { Container, Card, Button, Badge, Row, Col } from 'react-bootstrap';
+import './MyProjects.css';
 
 function MyProjects({ user, projects }) {
 
@@ -10,46 +10,48 @@ function MyProjects({ user, projects }) {
 
     return (
 
-        <Container>
-            <hr />
+        <>
 
-            <p className="my-projects-title">
-                Mis proyectos añadidos
-            </p>
+            <div className="my-projects">
+                <Container>
 
-            {projects.map(project => (
-                <Card style={{ width: '18rem' }} className='my-project-card'>
-                    <Card.Img variant="top" src={project.featuredImage} />
-                    <Card.Body>
-                        <Card.Title className='my-project-card-title'>{project.title}</Card.Title>
-                        <Card.Text className='my-project-card-date'>
-                            <p>Publicado el  {formatDate(project.createdAt)}</p>
-                        </Card.Text>
-                        <Card.Text className='my-project-card-description'>
-                            {project.description}
-                        </Card.Text>
-                        <Card.Text className='my-project-card-tags'>
-                            <ul>
-                                {project.tags.map(tag => (
-                                    <li key={tag}>{tag}</li>
-                                ))}
-                            </ul>
+                    <h2 className="my-projects-title">
+                        MIS PROYECTOS AÑADIDOS
+                    </h2>
 
-                        </Card.Text>
-                        <Card.Text>
-                            {project.tags && project.tags.map((e, idx) => (
-                                <Badge pill bg="secondary badge-custom m-1" key={idx}>
-                                    {e}
-                                </Badge>
-                            ))}
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
-            ))}
+                    <Row xs={1} md={3} lg={3} className="my-projects-cards-row" >
+                        {projects.map(project => (
+                            <Card style={{ width: '18rem' }} className='my-project-card' key={project._id}>
+                                <Card.Img variant="top" src={project.featuredImage} />
+                                <Card.Body>
+                                    <Card.Title className='my-project-card-title'>{project.title}</Card.Title>
+                                    <Card.Text className='my-project-card-date'>
+                                        <p>Publicado el  {formatDate(project.createdAt)}</p>
+                                    </Card.Text>
+                                    <Card.Text className='my-project-card-description'>
+                                        {project.description}
+                                    </Card.Text>
+                                    <Card.Text className='my-project-card-tags'>
+                                        {project.tags && project.tags.map((tag, idx) => (
+                                            <span key={idx}>
+                                                <p>#{tag}</p>
+                                                {idx !== project.tags.length - 1 && <span> </span>}
+                                            </span>
+                                        ))}
+                                    </Card.Text>
+                                    <div className="my-project-card-buttons">
+                                        <Button variant="dark" className='' size="sm">Editar</Button>
+                                        <Button variant="dark" className='m-1' size="sm">Eliminar</Button>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        ))}
+                    </Row    >
 
-        </Container>
-    )
+                </Container>
+            </div>
+        </>
+    );
 }
 
 export default MyProjects;

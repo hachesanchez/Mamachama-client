@@ -12,12 +12,25 @@ function Navigation() {
     const { user, logout } = useContext(AuthContext)
 
     const [displayInput, setDisplayInput] = useState(false)
+    const [expanded, setExpanded] = useState(false)
 
     const handleInput = () => {
         setDisplayInput(!displayInput)
     }
 
-    const [hoveredLink, setHoveredLink] = useState(false)
+    const handleToggle = () => {
+        setExpanded(!expanded)
+    }
+
+    const handleCloseNavbar = () => {
+        setExpanded(false)
+    }
+
+    const handleLogoutAndClose = () => {
+        logout()
+        handleCloseNavbar()
+    }
+
 
 
     return (
@@ -25,13 +38,17 @@ function Navigation() {
         <Navbar
             expand="lg"
             className={`navbar-custom`}
-            fixed='top'>
+            fixed='top'
+            expanded={expanded}
+        >
 
             <Navbar.Brand as={Link} to={'/'} className='nav-brand'> MAMACHAMA </Navbar.Brand>
 
             <Navbar.Toggle
                 aria-controls="basic-navbar-nav"
-                className={`toggle`} />
+                className={`toggle`}
+                onClick={handleToggle}
+            />
 
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto main-links">
@@ -53,6 +70,7 @@ function Navigation() {
                             as={Link}
                             to={'/somos/sobre-mamachama'}
                             className='drop down-item'
+                            onClick={handleCloseNavbar}
                         >
                             Sobre Mamachama
                         </NavDropdown.Item>
@@ -60,6 +78,7 @@ function Navigation() {
                             as={Link}
                             to={'/somos/nuestro-equipo'}
                             className='dropdown-item'
+                            onClick={handleCloseNavbar}
                         >
                             Nuestro equipo
                         </NavDropdown.Item>
@@ -70,6 +89,7 @@ function Navigation() {
                             as={Link}
                             to={'/hacemos/acciones'}
                             className='drop down-item'
+                            onClick={handleCloseNavbar}
                         >
                             ¿Qué hacemos?
                         </NavDropdown.Item>
@@ -77,6 +97,7 @@ function Navigation() {
                             as={Link}
                             to={'/hacemos/proyectos'}
                             className='dropdown-item'
+                            onClick={handleCloseNavbar}
                         >
                             Proyectos
                         </NavDropdown.Item>
@@ -87,6 +108,7 @@ function Navigation() {
                             as={Link}
                             to={'/colabora/invisibilizadas'}
                             className='drop down-item'
+                            onClick={handleCloseNavbar}
                         >
                             Libro "Invisibilizadas"
                         </NavDropdown.Item>
@@ -94,21 +116,22 @@ function Navigation() {
                             as={Link}
                             to={'/colabora/catering'}
                             className='dropdown-item'
+                            onClick={handleCloseNavbar}
                         >
                             Catering saludable
                         </NavDropdown.Item>
                     </NavDropdown>
 
-                    <Nav.Link as={Link} to={'/contacta'} className='nav-link'>CONTACTA</Nav.Link>
+                    <Nav.Link as={Link} to={'/contacta'} className='nav-link' onClick={handleCloseNavbar}>CONTACTA</Nav.Link>
 
                     {user &&
                         <>
                             <Navbar.Brand as={Link} to="/perfil" className='nav-link-greeting' >
-                                <img src={user?.avatar} alt="avatar" width="40" height="40" className="nav-avatar rounded-circle" />
+                                <img src={user?.avatar} alt="avatar" width="40" height="40" className="nav-avatar rounded-circle" onClick={handleCloseNavbar} />
                             </Navbar.Brand>
                             <NavDropdown title="" id="basic-nav-dropdown">
                                 <NavDropdown.Item
-                                    onClick={logout}
+                                    onClick={handleLogoutAndClose}
                                     className='drop down-item'
                                 >Cerrar Sesión
                                 </NavDropdown.Item>

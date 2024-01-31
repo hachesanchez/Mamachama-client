@@ -15,6 +15,7 @@
 
 .profile-avatarButtons {
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .profile-button {
@@ -23,7 +24,11 @@
 
 @media (max-width: 991px) {
 
-    ¡ .profile-greeting {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-greeting {
         justify-content: center;
         text-align: center;
     }

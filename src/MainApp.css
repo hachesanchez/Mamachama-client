@@ -17,7 +17,8 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #5C1116;
+  color: #380A0D;
+  /* color: #5C1116; */
 }
 
 a:hover {
@@ -39,7 +40,8 @@ a:hover {
 
 /* 
 COLOR PALETTE
-- Dark (footer, links, nav): #5C1116
+- Darker: #380A0D (footer, links, nav)
+- Dark  #5C1116
 - Mid: #8F363C
 - Light (page title background): #C27076
 - Lighter : #F5BFC3
