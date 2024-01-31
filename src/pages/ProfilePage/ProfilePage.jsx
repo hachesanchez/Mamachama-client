@@ -11,6 +11,8 @@ function ProfilePage() {
 
     const { user, logout } = useContext(AuthContext)
     const [projects, setProjects] = useState([])
+    //const [showModal, setShowModal] = useState(false)
+
 
 
     useEffect(() => {

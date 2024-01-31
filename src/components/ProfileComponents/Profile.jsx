@@ -1,6 +1,10 @@
-import { Button, Container, Image, Row, Col } from 'react-bootstrap';
-import './Profile.css';
+import { Button, Container, Image, Row, Col, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import SignupForm from './SignUpform';
+import './Profile.css';
+
+
 
 function Profile({ user, logout }) {
 
@@ -9,12 +13,20 @@ function Profile({ user, logout }) {
     }
 
     const { username, email, avatar } = user;
+
     const navigate = useNavigate()
 
     const handleLogout = () => {
         logout()
         navigate('/')
     }
+
+    const [showModal, setShowModal] = useState(false)
+
+    const handleSignupModal = () => {
+        setShowModal(!showModal)
+    }
+
 
     return (
         <>
@@ -33,7 +45,7 @@ function Profile({ user, logout }) {
                             <div className="profile-buttons">
                                 <Button variant="outline-secondary profile-button">Editar perfil</Button>{' '}
                                 <Button variant="outline-secondary profile-button">Proyecto nuevo</Button>{' '}
-                                <Button variant="outline-secondary profile-button">Añadir usuario</Button>{' '}
+                                <Button variant="outline-secondary profile-button" onClick={handleSignupModal}>Añadir usuaria</Button>{' '}
                                 <Button variant="outline-secondary profile-button" onClick={handleLogout}>Cerrar sesión</Button>{' '}
                             </div>
                         </Col>
@@ -41,6 +53,15 @@ function Profile({ user, logout }) {
 
                 </div>
             </Container>
+
+            <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Registra una usuaria</Modal.Title>
+                    <Modal.Body>
+                        <SignupForm closeModal={() => setShowModal(false)}></SignupForm>
+                    </Modal.Body>
+                </Modal.Header>
+            </Modal>
         </>
     );
 }
