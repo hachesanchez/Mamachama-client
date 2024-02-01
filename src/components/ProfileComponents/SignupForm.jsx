@@ -70,22 +70,22 @@ function SignupForm({ closeModal }) {
                 </Row>
 
                 <Form.Group className='mb-3' controlId='username'>
-                    <Form.Label className='signup-label'>Nombre de usuaria</Form.Label>
+                    <Form.Label className='signup-label'>Nombre</Form.Label>
                     <Form.Control type='text' value={username} name='username' onChange={handleInputChange} />
                 </Form.Group>
 
                 <Form.Group className='mb-3' controlId='avatar'>
-                    <Form.Label className='signup-label'>Avatar</Form.Label>
+                    <Form.Label className='signup-label'>Imagen de perfil</Form.Label>
                     <Form.Control type='file' onChange={handleFileUpload} />
                 </Form.Group>
 
                 <Form.Group className='mb-3' controlId='description'>
-                    <Form.Label className='signup-label'>Añade una descripción</Form.Label>
+                    <Form.Label className='signup-label'>Descripción</Form.Label>
                     <Form.Control as="textarea" rows={3} value={description} name='description' onChange={handleInputChange} />
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label className='signup-label'>Soy:</Form.Label>
+                    <Form.Label className='signup-label'>Relación</Form.Label>
                     <Form.Select controlId='relation' value={relation} name='relation' onChange={handleInputChange}>
                         <option value=''>Escoge una opción...</option>
                         <option value="Team Mamachama">Equipo Mamachama</option>
@@ -99,6 +99,8 @@ function SignupForm({ closeModal }) {
                 </div>
 
             </Form>
+
+            {/* TODO: Error managing */}
 
         </>
     )

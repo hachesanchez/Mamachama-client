@@ -1,12 +1,7 @@
-.form-choose-option {
-    color: #888;
-    text-emphasis-color: red;
-}
+ .signup-label {
+     color: rgb(0, 0, 0);
+ }
 
-.signup-label {
-    color: rgb(0, 0, 0);
-}
-
-.label.signup-form {
-    color: rgb(255, 255, 255);
-}
+ .label.signup-form {
+     color: rgb(255, 255, 255);
+ }
