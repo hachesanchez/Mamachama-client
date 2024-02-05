@@ -1,52 +1,97 @@
+:root {
+    --mamachama-team-color: #8F363C;
+    --collaborator-color: #F5BFC3;
+    --partner-color: #C27076;
+}
+
 .profile-card {
-    margin-top: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .profile-avatar {
-    height: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar img {
     width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 4px var(--mamachama-team-color)
 }
 
-.profile-greeting {
-    margin-bottom: 30px;
+.profile-avatar.mamachama img {
+    box-shadow: 0 0 0 4px var(--mamachama-team-color)
 }
 
-.profile-avatarButtons {
-    align-items: center;
-    margin-bottom: 30px;
+.profile-avatar.collaborator img {
+    box-shadow: 0 0 0 4px var(--collaborator-color)
+}
+
+.profile-avatar.partner img {
+    box-shadow: 0 0 0 4px var(--partner-color)
+}
+
+.profile-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.profile-description {
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .profile-button {
-    width: 150px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #afb9c4;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 991px) {
+.profile-button:hover {
+    background-color: #C27076;
+}
 
-    .profile-card {
-        padding: 20px;
-    }
+@media (max-width: 767px) {
 
-    .profile-greeting {
-        justify-content: center;
-        text-align: center;
-    }
 
-    .profile-avatarButtons {
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .profile-buttons {
-        margin-top: 20px;
+    .profile-actions {
+        flex-wrap: wrap;
     }
 
     .profile-button {
-        display: block;
-        width: 150px;
-        margin-bottom: 10px;
+        flex: 1 0 45%;
+        margin: 5px;
     }
 }

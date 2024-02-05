@@ -5,6 +5,7 @@ import LoginPage from "../pages/LoginPage/LoginPage"
 import ProfilePage from "../pages/ProfilePage/ProfilePage"
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage/PrivacyPolicyPage"
 import PrivateRoute from "./PrivateRoutes"
+import CookiesPage from "../pages/CookiesPage/CookiesPage"
 
 function AppRoutes() {
 
@@ -16,9 +17,9 @@ function AppRoutes() {
             <Route path="/contacta" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
+            <Route path="/politica-de-cookies" element={<CookiesPage />} />
 
             <Route element={<PrivateRoute />}>
-
                 <Route path="/perfil" element={<ProfilePage />} />
             </Route>
 

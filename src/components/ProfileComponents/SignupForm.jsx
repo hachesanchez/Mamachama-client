@@ -81,7 +81,7 @@ function SignupForm({ closeModal }) {
 
                 <Form.Group className='mb-3' controlId='description'>
                     <Form.Label className='signup-label'>Descripción</Form.Label>
-                    <Form.Control as="textarea" rows={3} value={description} name='description' onChange={handleInputChange} />
+                    <Form.Control as="textarea" rows={2} value={description} name='description' onChange={handleInputChange} />
                 </Form.Group>
 
                 <Form.Group>

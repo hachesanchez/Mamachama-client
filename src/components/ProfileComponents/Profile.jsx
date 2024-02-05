@@ -10,7 +10,7 @@ function Profile({ user, logout }) {
         return null
     }
 
-    const { username, avatar } = user
+    const { username, email, avatar, description, relation } = user
     const navigate = useNavigate()
     const [showSignupModal, setShowSignupModal] = useState(false)
     const [showEditProfileModal, setShowEditProfileModal] = useState(false)
@@ -31,40 +31,41 @@ function Profile({ user, logout }) {
     return (
         <>
             <Container>
-                <div className="profile-card">
-
-                    <div className="profile-greeting">
-                        <h2 className="profile-title">¡Hola {username}!</h2>
-                    </div>
-
-                    <Row className="profile-avatarButtons">
-                        <Col lg={3} md={7} sm={6} xs={6}>
-                            <Image className="profile-avatar" src={avatar} alt="Profile picture" roundedCircle />
-                        </Col>
-                        <Col lg={9} md={5} sm={6} xs={6}>
-                            <div className="profile-buttons">
-                                <Button variant="outline-secondary profile-button" onClick={handleEditProfileModal}>
-                                    Editar perfil
-                                </Button>{' '}
-                                <Button variant="outline-secondary profile-button">
-                                    Proyecto nuevo
-                                </Button>{' '}
-                                <Button variant="outline-secondary profile-button" onClick={handleSignupModal}>
-                                    Añadir usuaria
-                                </Button>{' '}
-                                <Button variant="outline-secondary profile-button" onClick={handleLogout}>
-                                    Cerrar sesión
-                                </Button>{' '}
+                <Row className="justify-content-center">
+                    <Col lg={8} md={10} sm={12} xs={12}>
+                        <div className="profile-card">
+                            <div className={`profile-avatar ${relation.toLowerCase()}`}>
+                                <Image src={avatar} alt="Profile picture" roundedCircle />
                             </div>
-                        </Col>
-                    </Row>
-
-                </div>
+                            <div className="profile-details">
+                                <h2 className="profile-title">¡Hola {username}!</h2>
+                                <p className="profile-info">{relation}</p>
+                                <p className="profile-description">{description}</p>
+                            </div>
+                            <div className="profile-actions">
+                                <Button className="profile-button" variant="outline-secondary" onClick={handleEditProfileModal}>
+                                    Editar perfil
+                                </Button>
+                                <Button className="profile-button" variant="outline-secondary">
+                                    Proyecto nuevo
+                                </Button>
+                                <Button className="profile-button" variant="outline-secondary" onClick={handleSignupModal}>
+                                    Añadir usuaria
+                                </Button>
+                                <Button className="profile-button" variant="outline-secondary">
+                                    Lista de usuarias
+                                </Button>
+                                <Button className="profile-button" variant="outline-secondary" onClick={handleLogout}>
+                                    Cerrar sesión
+                                </Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
             </Container>
 
             <SignupModal showModal={showSignupModal} setShowModal={setShowSignupModal} />
-            <EditProfileModal showModal={showEditProfileModal} setShowModal={setShowEditProfileModal} />
-
+            <EditProfileModal showModal={showEditProfileModal} setShowModal={setShowEditProfileModal} user={user} />
         </>
     )
 }

@@ -38,8 +38,12 @@ function ProfilePage() {
     return (
 
         <>
-            <Profile user={user} logout={logout} />
-            <MyProjects user={user} projects={userProjects} />
+            <div className="profile-component">
+                <Profile user={user} logout={logout} />
+            </div>
+            <div className="myprojects-component">
+                <MyProjects user={user} projects={userProjects} />
+            </div>
         </>
 
     )
