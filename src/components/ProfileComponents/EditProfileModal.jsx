@@ -1,7 +1,7 @@
 import { Modal } from 'react-bootstrap';
 import EditProfileForm from './EditProfileForm';
 
-function EditProfileModal({ showModal, setShowModal, user }) {
+function EditProfileModal({ showModal, setShowModal, user, updateProfile }) {
 
     const handleClose = () => setShowModal(false)
 
@@ -18,17 +18,20 @@ function EditProfileModal({ showModal, setShowModal, user }) {
                 onHide={() => setShowModal(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title id=" ">
-                        Estás editando el perfil de {user}
+                        Estás editando el perfil de {user.username}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <EditProfileForm closeModal={handleClose} user={user}
+                    <EditProfileForm
+                        closeModal={handleClose}
                         email={user.email}
-                        password={user.password}
                         username={user.username}
+                        password={user.password}
                         description={user.description}
                         avatar={user.avatar}
                         relation={user.relation}
+                        userID={user._id}
+                        updateProfile={updateProfile}
                     />
                 </Modal.Body>
             </Modal >

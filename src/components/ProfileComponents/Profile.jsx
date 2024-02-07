@@ -5,7 +5,7 @@ import SignupModal from './SignupModal'
 import EditProfileModal from './EditProfileModal'
 import './Profile.css'
 
-function Profile({ user, logout }) {
+function Profile({ user, updateProfile, logout }) {
     if (!user) {
         return null
     }
@@ -64,8 +64,16 @@ function Profile({ user, logout }) {
                 </Row>
             </Container>
 
-            <SignupModal showModal={showSignupModal} setShowModal={setShowSignupModal} />
-            <EditProfileModal showModal={showEditProfileModal} setShowModal={setShowEditProfileModal} user={user} />
+            <SignupModal
+                showModal={showSignupModal}
+                setShowModal={setShowSignupModal}
+            />
+            <EditProfileModal
+                showModal={showEditProfileModal}
+                setShowModal={setShowEditProfileModal}
+                user={user}
+                updateProfile={updateProfile}
+            />
         </>
     )
 }

@@ -1,17 +1,16 @@
-import { Container, Card, Button, Badge, Row, Col } from 'react-bootstrap';
-import './MyProjects.css';
+import { Container, Card, Button, Badge, Row, Col } from 'react-bootstrap'
+import './MyProjects.css'
 
 function MyProjects({ user, projects }) {
 
     function formatDate(dateString) {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('es-ES');
+        const date = new Date(dateString)
+        return date.toLocaleDateString('es-ES')
     }
 
     return (
 
         <>
-
             <div className="my-projects">
                 <Container>
 
@@ -19,14 +18,14 @@ function MyProjects({ user, projects }) {
                         MIS PROYECTOS AÑADIDOS
                     </h2>
 
-                    <Row xs={1} md={3} lg={3} className="my-projects-cards-row" >
+                    <Row xs={1} md={3} lg={3} className="my-projects-cards-row">
                         {projects.map(project => (
                             <Card style={{ width: '18rem' }} className='my-project-card' key={project._id}>
                                 <Card.Img variant="top" src={project.featuredImage} />
                                 <Card.Body>
                                     <Card.Title className='my-project-card-title'>{project.title}</Card.Title>
                                     <Card.Text className='my-project-card-date'>
-                                        <p>Publicado el  {formatDate(project.createdAt)}</p>
+                                        Publicado el <span>{formatDate(project.createdAt)}</span>
                                     </Card.Text>
                                     <Card.Text className='my-project-card-description'>
                                         {project.description}
@@ -34,8 +33,7 @@ function MyProjects({ user, projects }) {
                                     <Card.Text className='my-project-card-tags'>
                                         {project.tags && project.tags.map((tag, idx) => (
                                             <span key={idx}>
-                                                <p>#{tag}</p>
-                                                {idx !== project.tags.length - 1 && <span> </span>}
+                                                #{tag}
                                             </span>
                                         ))}
                                     </Card.Text>
@@ -46,12 +44,12 @@ function MyProjects({ user, projects }) {
                                 </Card.Body>
                             </Card>
                         ))}
-                    </Row    >
+                    </Row>
 
                 </Container>
             </div>
         </>
-    );
+    )
 }
 
-export default MyProjects;
+export default MyProjects
