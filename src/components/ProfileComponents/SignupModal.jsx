@@ -11,7 +11,7 @@ function SignupModal({ showModal, setShowModal }) {
 
         <>
             <Modal
-                size="lg"
+                size="md"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
                 show={showModal}
