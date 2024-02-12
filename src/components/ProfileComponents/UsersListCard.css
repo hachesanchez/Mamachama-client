@@ -1,0 +1,23 @@
+.user-list-component {
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-list-card {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.card-img {
+    object-fit: cover;
+    height: 100%;
+}

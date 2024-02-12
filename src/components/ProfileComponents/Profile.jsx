@@ -1,8 +1,10 @@
+// Profile.jsx
 import { Button, Container, Image, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import SignupModal from './SignupModal'
 import EditProfileModal from './EditProfileModal'
+import UsersListModal from './UsersListModal'
 import './Profile.css'
 
 function Profile({ user, updateProfile, logout }) {
@@ -11,25 +13,30 @@ function Profile({ user, updateProfile, logout }) {
     }
 
     const { username, email, avatar, description, relation } = user
-    const navigate = useNavigate()
+
+
     const [showSignupModal, setShowSignupModal] = useState(false)
     const [showEditProfileModal, setShowEditProfileModal] = useState(false)
+    const [showUsersListModal, setShowUsersListModal] = useState(false)
+
+
+    const navigate = useNavigate()
+
+
+    const handleOpenSignupModal = () => setShowSignupModal(true)
+    const handleOpenEditProfileModal = () => setShowEditProfileModal(true)
+    const handleOpenUsersListModal = () => setShowUsersListModal(true)
 
     const handleLogout = () => {
         logout()
         navigate('/')
     }
 
-    const handleSignupModal = () => {
-        setShowSignupModal(true)
-    }
-
-    const handleEditProfileModal = () => {
-        setShowEditProfileModal(true)
-    }
 
     return (
+
         <>
+
             <Container>
                 <Row className="justify-content-center">
                     <Col lg={8} md={10} sm={12} xs={12}>
@@ -43,18 +50,22 @@ function Profile({ user, updateProfile, logout }) {
                                 <p className="profile-description">{description}</p>
                             </div>
                             <div className="profile-actions">
-                                <Button className="profile-button" variant="outline-secondary" onClick={handleEditProfileModal}>
+                                <Button className="profile-button" variant="outline-secondary" onClick={handleOpenEditProfileModal}>
                                     Editar perfil
                                 </Button>
                                 <Button className="profile-button" variant="outline-secondary">
                                     Proyecto nuevo
                                 </Button>
-                                <Button className="profile-button" variant="outline-secondary" onClick={handleSignupModal}>
-                                    Añadir usuaria
-                                </Button>
-                                <Button className="profile-button" variant="outline-secondary">
-                                    Lista de usuarias
-                                </Button>
+                                {user.relation !== 'Partner' &&
+                                    <Button className="profile-button" variant="outline-secondary" onClick={handleOpenSignupModal}>
+                                        Añadir usuaria
+                                    </Button>
+                                }
+                                {user.relation === 'Team Mamachama' &&
+                                    <Button className="profile-button" variant="outline-secondary" onClick={handleOpenUsersListModal}>
+                                        Lista de usuarias
+                                    </Button>
+                                }
                                 <Button className="profile-button" variant="outline-secondary" onClick={handleLogout}>
                                     Cerrar sesión
                                 </Button>
@@ -74,6 +85,12 @@ function Profile({ user, updateProfile, logout }) {
                 user={user}
                 updateProfile={updateProfile}
             />
+            <UsersListModal
+                showModal={showUsersListModal}
+                setShowModal={setShowUsersListModal}
+                user={user}
+            />
+
         </>
     )
 }
