@@ -1,7 +1,9 @@
-import { Modal } from "react-bootstrap";
+import { Container, Modal, Row, Col } from "react-bootstrap";
 import UsersListCard from "./UsersListCard";
 
-export default function UsersListModal({ showModal, setShowModal, user }) {
+export default function UsersListModal({ showModal, setShowModal, user, userList }) {
+
+
 
     return (
 
@@ -9,10 +11,8 @@ export default function UsersListModal({ showModal, setShowModal, user }) {
             <Modal
                 show={showModal}
                 size="xl"
-                aria-labelledby="contained-modal-title-vcenter"
+                aria-labelledby="title-vcenter"
                 centered
-                // dialogClassName="modal-90w"
-                // aria-labelledby="example-custom-modal-styling-title"
                 onHide={() => setShowModal(false)}
             >
                 <Modal.Header closeButton>
@@ -21,7 +21,17 @@ export default function UsersListModal({ showModal, setShowModal, user }) {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <UsersListCard user={user} />
+                    <Container>
+                        {console.log('los users en el componente', userList)}
+                        <Row >
+                            {userList?.map((user) => (
+                                <Col key={user.id} >
+                                    <UsersListCard user={user} />
+                                </Col>
+                            ))
+                            }
+                        </Row>
+                    </Container>
                 </Modal.Body>
             </Modal>
         </>

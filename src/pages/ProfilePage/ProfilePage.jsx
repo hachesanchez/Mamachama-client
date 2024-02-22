@@ -8,10 +8,25 @@ import './ProfilePage.css'
 function ProfilePage() {
     const { user, setUser, logout } = useContext(AuthContext)
     const [projects, setProjects] = useState([])
+    const [userList, setUserList] = useState()
 
     useEffect(() => {
         loadProjects()
+        loadUsers()
     }, [])
+
+
+    const loadUsers = () => {
+        userService
+            .getAllUsers()
+            .then(({ data }) => {
+                setUserList(data)
+            })
+            .catch(error => {
+                console.error('Error fetching user list:', error);
+            })
+    }
+
 
     const loadProjects = () => {
         userService
@@ -33,10 +48,17 @@ function ProfilePage() {
     return (
         <>
             <div className="profile-component">
-                <Profile user={user} logout={logout} updateProfile={updateProfile} />
+                <Profile
+                    user={user}
+                    logout={logout}
+                    updateProfile={updateProfile}
+                    userList={userList}
+                />
             </div>
             <div className="myprojects-component">
-                <MyProjects user={user} projects={userProjects} />
+                <MyProjects
+                    user={user}
+                    projects={userProjects} />
             </div>
         </>
     )

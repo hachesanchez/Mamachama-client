@@ -1,4 +1,3 @@
-// Profile.jsx
 import { Button, Container, Image, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
@@ -7,7 +6,7 @@ import EditProfileModal from './EditProfileModal'
 import UsersListModal from './UsersListModal'
 import './Profile.css'
 
-function Profile({ user, updateProfile, logout }) {
+function Profile({ user, updateProfile, logout, userList }) {
     if (!user) {
         return null
     }
@@ -89,6 +88,7 @@ function Profile({ user, updateProfile, logout }) {
                 showModal={showUsersListModal}
                 setShowModal={setShowUsersListModal}
                 user={user}
+                userList={userList}
             />
 
         </>
