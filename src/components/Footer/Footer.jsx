@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+
 import './Footer.css';
 
 
@@ -53,18 +55,37 @@ function Footer() {
                 </Row>
                 <hr />
                 {/* TODO: Aviso legal, memoria, cookies */}
-                <Row className='footer-extra-links' >
-                    <Link to={'/politica-de-privacidad'}>Política de Privacidad</Link> |
-                    <Link to={'/politica-de-cookies'}>Política de Cookies</Link> |
-                    <Link to={'/aviso-legal'}>Aviso legal</Link> |
-                    <Link to={''}>Memoria 2021</Link>
-                </Row>
-                <Row className='footer-copy'>
-                    <p  > © 2024 Mamachama</p>
+                <Row className='footer-sections'>
+                    <Col className='footer-extra-links' lg={6} md={12} sm={12} >
+                        <Link to={'/politica-de-privacidad'}>Política de Privacidad</Link> |
+                        <Link to={'/politica-de-cookies'}> Política de Cookies</Link> |
+                        <Link to={'/aviso-legal'}> Aviso legal</Link>
+                        {/* <Link to={''}> Memoria 2021</Link> */}
+                        <div className="footer-copy">
+                            <p> © 2024 Mamachama</p>
+                        </div>
+                    </Col>
+                    <Col className='footer-social' lg={6} md={12} sm={12}>
+                        <p className="footer-social-title">SÍGUENOS EN: </p>
+                        <div className="footer-social-icons">
+                            <a target='blank' rel='noreferer noopener' href="https://www.instagram.com/mamachama__/">
+                                <FaInstagram />
+                            </a>
+                            <a target='blank' rel='noreferer noopener' href="https://www.facebook.com/MamaChamaa">
+                                <FaFacebook />
+                            </a>
+                            <a target='blank' rel='noreferer noopener' href="https://twitter.com/mamachamaa">
+                                <FaTwitter />
+                            </a>
+                            <a target='blank' rel='noreferer noopener' href="https://www.youtube.com/channel/UC6jnPuf2Nd_3RGHAq3NqTZw">
+                                <FaYoutube />
+                            </a>
+                        </div>
+                    </Col>
                 </Row>
 
             </Container>
-        </div>
+        </div >
     );
 }
 
