@@ -2,9 +2,14 @@ import { Modal } from 'react-bootstrap';
 import SignupForm from './SignUpform';
 
 
-function SignupModal({ showModal, setShowModal }) {
+function SignupModal({ showModal, setShowModal, handleAddUser }) {
 
     const handleClose = () => setShowModal(false)
+
+    const handleCreateUser = (newUser) => {
+        handleClose();
+        handleAddUser(newUser)
+    }
 
 
     return (
@@ -15,14 +20,15 @@ function SignupModal({ showModal, setShowModal }) {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
                 show={showModal}
-                onHide={() => setShowModal(false)}>
+                onHide={() => setShowModal(false)}
+            >
                 <Modal.Header closeButton>
                     <Modal.Title id=" ">
                         Registra una usuaria
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <SignupForm closeModal={handleClose}></SignupForm>
+                    <SignupForm createUser={handleCreateUser} />
                 </Modal.Body>
             </Modal>
         </>

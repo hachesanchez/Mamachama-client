@@ -6,21 +6,20 @@ import EditProfileModal from './EditProfileModal'
 import UsersListModal from './UsersListModal'
 import './Profile.css'
 
-function Profile({ user, updateProfile, logout, userList }) {
+function Profile({ user, updateProfile, logout, userList, updateUserList, handleAddUser, handleDeleteUser }) {
+
     if (!user) {
         return null
     }
 
-    const { username, email, avatar, description, relation } = user
 
+    const { username, email, avatar, description, relation } = user
 
     const [showSignupModal, setShowSignupModal] = useState(false)
     const [showEditProfileModal, setShowEditProfileModal] = useState(false)
     const [showUsersListModal, setShowUsersListModal] = useState(false)
 
-
     const navigate = useNavigate()
-
 
     const handleOpenSignupModal = () => setShowSignupModal(true)
     const handleOpenEditProfileModal = () => setShowEditProfileModal(true)
@@ -77,6 +76,7 @@ function Profile({ user, updateProfile, logout, userList }) {
             <SignupModal
                 showModal={showSignupModal}
                 setShowModal={setShowSignupModal}
+                handleAddUser={handleAddUser}
             />
             <EditProfileModal
                 showModal={showEditProfileModal}
@@ -89,6 +89,8 @@ function Profile({ user, updateProfile, logout, userList }) {
                 setShowModal={setShowUsersListModal}
                 user={user}
                 userList={userList}
+                updateUserList={updateUserList}
+                handleDeleteUser={handleDeleteUser}
             />
 
         </>

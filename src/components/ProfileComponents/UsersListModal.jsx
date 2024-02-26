@@ -1,7 +1,7 @@
 import { Container, Modal, Row, Col } from "react-bootstrap";
 import UsersListCard from "./UsersListCard";
 
-export default function UsersListModal({ showModal, setShowModal, user, userList }) {
+export default function UsersListModal({ showModal, setShowModal, userList, updateUserList, handleDeleteUser }) {
 
 
 
@@ -22,11 +22,14 @@ export default function UsersListModal({ showModal, setShowModal, user, userList
                 </Modal.Header>
                 <Modal.Body>
                     <Container>
-                        {console.log('los users en el componente', userList)}
-                        <Row >
-                            {userList?.map((user) => (
-                                <Col key={user.id} >
-                                    <UsersListCard user={user} />
+                        <Row className="user-list-row" >
+                            {userList?.map((user, index) => (
+                                <Col key={index} className="mb-2 mt-2" xl={2} lg={3} md={4} sm={6} xs={6}>
+                                    <UsersListCard
+                                        user={user}
+                                        updateUserList={updateUserList}
+                                        handleDeleteUser={handleDeleteUser}
+                                    />
                                 </Col>
                             ))
                             }

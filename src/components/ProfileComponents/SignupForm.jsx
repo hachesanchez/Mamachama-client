@@ -4,7 +4,7 @@ import authService from '../../services/auth.services'
 import uploadServices from '../../services/uploader.services'
 import './SignupForm.css'
 
-function SignupForm({ closeModal }) {
+function SignupForm({ createUser }) {
 
     const [signupData, setSignupData] = useState({
         email: '',
@@ -27,7 +27,7 @@ function SignupForm({ closeModal }) {
         authService
             .signup(signupData)
             .then(({ data }) => {
-                closeModal()
+                createUser(data)
                 console.log('usuaria creada:', data)
             })
             .catch(err => console.log(err))

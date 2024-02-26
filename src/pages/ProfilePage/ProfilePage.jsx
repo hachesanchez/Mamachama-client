@@ -5,10 +5,13 @@ import MyProjects from '../../components/ProfileComponents/MyProjects'
 import userService from '../../services/user.services'
 import './ProfilePage.css'
 
+
 function ProfilePage() {
+
+
     const { user, setUser, logout } = useContext(AuthContext)
     const [projects, setProjects] = useState([])
-    const [userList, setUserList] = useState()
+    const [userList, setUserList] = useState([])
 
     useEffect(() => {
         loadProjects()
@@ -23,29 +26,65 @@ function ProfilePage() {
                 setUserList(data)
             })
             .catch(error => {
-                console.error('Error fetching user list:', error);
+                console.error('Error fetching user list:', error)
             })
     }
 
 
     const loadProjects = () => {
-        userService
-            .getProjectsByUserId(user._id)
-            .then(({ data }) => {
-                setProjects(data)
-            })
-            .catch(error => {
-                console.error('Error fetching user projects:', error);
-            })
+        if (user?._id) {
+            userService
+                .getProjectsByUserId(user._id)
+                .then(({ data }) => {
+                    setProjects(data)
+                })
+                .catch(error => {
+                    console.error('Error fetching user projects:', error)
+                })
+        }
     }
+
 
     const updateProfile = (updatedUserData) => {
         setUser({ ...user, ...updatedUserData })
     }
 
-    const userProjects = projects && Array.isArray(projects) ? projects : [];
+
+    const handleDeleteUser = (userId) => {
+        const confirmation = window.confirm(`¿Estás segura de que quieres eliminar a ${user.username}?`)
+        if (confirmation) {
+            userService
+                .deleteUser(userId)
+                .then(() => {
+                    updateUserList({ deleted: [userId] })
+                })
+                .catch(error => {
+                    console.error('Error deleting user:', error)
+                })
+        }
+    }
+
+
+    const updateUserList = (updatedUsers) => {
+        setUserList(prevUserList => {
+            const { deleted = [], added = [] } = updatedUsers
+            const filteredList = prevUserList.filter(user => !deleted.includes(user._id))
+            return [...filteredList, ...added]
+        })
+
+    }
+
+
+    const handleAddUser = (newUser) => {
+        updateUserList({ added: [newUser], deleted: [] })
+    }
+
+
+    const userProjects = projects && Array.isArray(projects) ? projects : []
+
 
     return (
+
         <>
             <div className="profile-component">
                 <Profile
@@ -53,14 +92,16 @@ function ProfilePage() {
                     logout={logout}
                     updateProfile={updateProfile}
                     userList={userList}
+                    updateUserList={updateUserList}
+                    handleAddUser={handleAddUser}
+                    handleDeleteUser={handleDeleteUser}
                 />
             </div>
             <div className="myprojects-component">
-                <MyProjects
-                    user={user}
-                    projects={userProjects} />
+                <MyProjects user={user} projects={userProjects} />
             </div>
         </>
+
     )
 }
 
