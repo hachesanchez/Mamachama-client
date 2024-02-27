@@ -28,6 +28,14 @@ class UserService {
         return this.api.get(`/getOneUser/${userId}`);
     }
 
+    getMamachama() {
+        return this.api.get(`/getMamachama`)
+    }
+
+    getCollaborators() {
+        return this.api.get(`/getCollaborators`)
+    }
+
     // getUsersByRelation(relation) {
     //     return this.api.get(`/get${relation}`);
     // }

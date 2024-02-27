@@ -74,7 +74,8 @@ function Navigation() {
                     <NavDropdown title="SOMOS" id="basic-nav-dropdown">
                         <NavDropdown.Item
                             as={Link}
-                            to={'/somos/sobre-mamachama'}
+                            // to={'/somos/sobre-mamachama'}
+                            to={'/somos'}
                             className='drop down-item'
                             onClick={handleCloseNavbar}
                         >
@@ -93,7 +94,8 @@ function Navigation() {
                     <NavDropdown title="HACEMOS" id="basic-nav-dropdown">
                         <NavDropdown.Item
                             as={Link}
-                            to={'/hacemos/acciones'}
+                            // to={'/hacemos/acciones'}
+                            to={'/hacemos'}
                             className='drop down-item'
                             onClick={handleCloseNavbar}
                         >

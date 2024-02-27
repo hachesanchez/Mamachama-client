@@ -36,6 +36,15 @@ a:hover {
   margin-left: 30px;
 }
 
+.page-subtitle {
+  margin-top: 20px;
+  font-size: 25px;
+  max-width: 700px;
+  color: #947C80;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+}
+
 
 
 /* 

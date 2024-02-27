@@ -18,7 +18,8 @@ function Footer() {
                         <p className="footer-title">Somos</p>
                         <hr />
                         <div className="footer-links">
-                            <Link to={'/somos/sobre-mamachama'}>Sobre Mamachama</Link>
+                            {/* <Link to={'/somos/sobre-mamachama'}>Sobre Mamachama</Link> */}
+                            <Link to={'/somos'}>Sobre Mamachama</Link>
                             <br />
                             <Link to={'/somos/nuestro-equipo'}>Nuestro equipo</Link>
                             <br />

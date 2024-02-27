@@ -3,9 +3,8 @@ import { useState } from "react"
 import ContactForm from "../../components/Contact/ContactForm"
 import PrivacyPolicyShort from "../../components/Contact/PrivacyPolicyShort"
 import EspacioColombia from "../../components/Contact/EspacioColombia"
-import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy"
-import './ContactPage.css'
 import PrivacyPolicyModal from "../../components/Contact/PrivacyPolicyModal"
+import './ContactPage.css'
 
 
 
