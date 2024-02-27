@@ -1,16 +1,20 @@
-import { Container } from 'react-bootstrap'
-import './HomePage.css'
 import Header from '../../components/HomeComponents/Header'
-import Hacemos from '../../components/HomeComponents/Hacemos'
+import AboutSection from '../../components/HomeComponents/AboutSection'
+import NewsSection from '../../components/HomeComponents/NewsSection'
+import ContactSection from '../../components/HomeComponents/ContactSection'
+import './HomePage.css'
 
 function HomePage() {
+
 
     return (
 
         <div className="Homepage">
 
             <Header />
-            <Hacemos />
+            <AboutSection />
+            <NewsSection />
+            <ContactSection />
 
         </div>
     )

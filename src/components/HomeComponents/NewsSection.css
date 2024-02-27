@@ -1,0 +1,18 @@
+.news-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.news-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-cards {
+    text-align: center;
+}
+
+.news-cards img {
+    width: 270px;
+    margin: 10px;
+}

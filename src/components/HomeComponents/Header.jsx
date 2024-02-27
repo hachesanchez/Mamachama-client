@@ -1,5 +1,4 @@
-import { Container } from 'react-bootstrap'
-import heroImg from '../../assets/images/header-test.jpg'
+import heroImg from '../../assets/images/mamachama-hero.jpeg'
 import './Header.css'
 
 function Header() {
@@ -10,12 +9,16 @@ function Header() {
 
             <img className='hero-img' src={heroImg} alt="communitary work" />
 
-            <Container>
-
-                <p className="test">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorem quam voluptatibus doloribus sed maxime accusantium dicta molestiae obcaecati excepturi? Veritatis nobis numquam illum consequuntur ut! Quos voluptatum iure sint.
+            <div className="header-message">
+                <p className="header-message-title">
+                    Somos Mamachama y esta es la primera frase que queremos que leas cuando llegas a nuestra web
                 </p>
-            </Container>
+                <p className="header-message-body">
+                    aquí te meto un par de Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nobis facere quisquam earum. Nisi architecto doloremque blanditiis illo! Facilis culpa facere laudantium? Minima quidem nihil non aperiam similique repudiandae? Aperiam?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel sequi esse aspernatur.
+                </p>
+            </div>
+
         </>
     )
 }

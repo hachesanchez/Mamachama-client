@@ -65,6 +65,12 @@ function Navigation() {
                             </ScrollLink>
                         </div> */}
 
+                    {/* <Link to="/somos" className="nav-link">
+                        <NavDropdown title="SOMOS" id="basic-nav-dropdown">
+                            <NavDropdown.Item as={Link} to="/somos/sobre-mamachama">Sobre Mamachama</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/somos/nuestro-equipo">Nuestro equipo</NavDropdown.Item>
+                        </NavDropdown>
+                    </Link> */}
                     <NavDropdown title="SOMOS" id="basic-nav-dropdown">
                         <NavDropdown.Item
                             as={Link}

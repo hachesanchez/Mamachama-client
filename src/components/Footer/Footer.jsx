@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-
 import './Footer.css';
 
 
 
 function Footer() {
+
     return (
 
         <div className="Footer">

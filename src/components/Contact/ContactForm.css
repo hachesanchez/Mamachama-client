@@ -20,3 +20,17 @@
     color: #888;
     font-size: 13px;
 }
+
+.contact-thanks-message {
+    color: #380A0D;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+
+    .contact-thanks-message {
+        text-align: center;
+    }
+
+}

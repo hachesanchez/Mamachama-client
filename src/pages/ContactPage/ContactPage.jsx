@@ -5,6 +5,7 @@ import PrivacyPolicyShort from "../../components/Contact/PrivacyPolicyShort"
 import EspacioColombia from "../../components/Contact/EspacioColombia"
 import PrivacyPolicy from "../../components/PrivacyPolicy/PrivacyPolicy"
 import './ContactPage.css'
+import PrivacyPolicyModal from "../../components/Contact/PrivacyPolicyModal"
 
 
 
@@ -38,27 +39,10 @@ function ContactPage() {
                         <EspacioColombia />
                     </div>
 
-                    <Modal
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                        size="lg"
-                        aria-labelledby="contained-modal-title-vcenter"
-                        centered
-                        className="contact-modal"
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title className="form-title">
-                                Política de privacidad
-                            </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <div className="modal-content">
-                                <PrivacyPolicy closeModal={() => setShowModal(false)} />
-                            </div>
-                        </Modal.Body>
-                    </Modal>
+                    <PrivacyPolicyModal modalShow={modalShow} setModalShow={setModalShow} />
 
                 </Container>
+
             </div>
 
         </>

@@ -6,6 +6,7 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage"
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage/PrivacyPolicyPage"
 import PrivateRoute from "./PrivateRoutes"
 import CookiesPage from "../pages/CookiesPage/CookiesPage"
+import AboutPage from "../pages/AboutPage/AboutPage"
 
 function AppRoutes() {
 
@@ -14,6 +15,7 @@ function AppRoutes() {
         <Routes>
 
             <Route path="/" element={<HomePage />} />
+            <Route path="/somos" element={<AboutPage />} />
             <Route path="/contacta" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />

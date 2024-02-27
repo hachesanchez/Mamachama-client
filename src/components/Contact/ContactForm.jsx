@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Form, FormGroup, Col, Button } from "react-bootstrap";
-import './ContactForm.css'
 import { Link } from "react-router-dom";
+import './ContactForm.css'
 
 function ContactForm({ handlePolicyModal }) {
 
@@ -14,7 +14,7 @@ function ContactForm({ handlePolicyModal }) {
     }
 
     if (state.succeeded) {
-        return <p>Gracias por ponerte en contacto con nosotras</p>;
+        return <h3 className="contact-thanks-message">Gracias por ponerte en contacto con nosotras!!</h3>;
     }
 
 
