@@ -3,6 +3,7 @@ import AboutSection from '../../components/HomeComponents/AboutSection'
 import NewsSection from '../../components/HomeComponents/NewsSection'
 import ContactSection from '../../components/HomeComponents/ContactSection'
 import './HomePage.css'
+import POVSection from '../../components/HomeComponents/POVSection'
 
 function HomePage() {
 
@@ -14,6 +15,7 @@ function HomePage() {
             <Header />
             <AboutSection />
             <NewsSection />
+            <POVSection />
             <ContactSection />
 
         </div>

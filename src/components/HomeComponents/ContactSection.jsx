@@ -22,7 +22,7 @@ function ContactSection() {
                 <Row>
                     <Col md={3} sm={12} className="homepage-contact-title">
                         <h1>
-                            Escríbenos algo!
+                            ¿Hablamos?
                         </h1>
                     </Col>
                     <Col md={9} sm={12}>

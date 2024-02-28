@@ -1,13 +1,12 @@
 import './PartnerCards.css'
 
-function PartnerCards() {
+function PartnerCards({ user }) {
 
     return (
 
         <>
             <p>
-                partners cards
-            </p>
+            </p >
 
 
         </>

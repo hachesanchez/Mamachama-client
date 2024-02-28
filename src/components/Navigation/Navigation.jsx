@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown, Form, Row, Col, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from "react-scroll";
 import searchIcon from '../../assets/icons/icon-search.png'
 import { useContext, useState } from 'react';
@@ -13,6 +13,8 @@ function Navigation() {
 
     const [displayInput, setDisplayInput] = useState(false)
     const [expanded, setExpanded] = useState(false)
+
+    const navigate = useNavigate()
 
     const handleInput = () => {
         setDisplayInput(!displayInput)
@@ -29,6 +31,7 @@ function Navigation() {
     const handleLogoutAndClose = () => {
         logout()
         handleCloseNavbar()
+        navigate('/')
     }
 
 

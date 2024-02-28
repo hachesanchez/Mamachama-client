@@ -6,15 +6,26 @@
 }
 
 .header-message {
-    padding: 60px 60px 60px 60px;
+    padding: 200px 200px 200px 200px;
     background-color: #F5BFC3;
     text-align: center;
 }
 
 .header-message-title {
-    font-size: 1.5em;
+    font-size: 3.5em;
     font-weight: bold;
-    text-transform: uppercase;
     color: #474747;
     font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 599px) {
+    .header-message-title {
+        font-size: 1.5em;
+    }
+
+    .header-message {
+        padding: 60px 60px 60px 60px;
+        background-color: #F5BFC3;
+        text-align: center;
+    }
 }

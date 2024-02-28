@@ -57,4 +57,16 @@
 
 .user-card-name {
     font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 3px
+}
+
+.user-card-occupation {
+    color: #380A0D;
+    margin-bottom: 3px
+}
+
+.card-social-icons svg {
+    width: 24px;
+    height: auto;
 }

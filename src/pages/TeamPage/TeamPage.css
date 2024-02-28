@@ -9,8 +9,32 @@
 }
 
 .user-card-col {
-    justify-content: center;
     display: inline-block;
     justify-items: center;
     margin: 40px;
+}
+
+.collaborators-section {
+    background-color: #c270755d;
+    padding: 30px;
+}
+
+.collaborators-container {
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.collaborators-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    color: #947C80;
+}
+
+.collaborators-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }

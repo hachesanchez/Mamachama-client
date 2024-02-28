@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+
 import './MamachamaCard.css';
-import { Row } from 'react-bootstrap';
 
 function MamachamaCard({ user }) {
 
@@ -25,6 +26,18 @@ function MamachamaCard({ user }) {
             </div>
             <div className="user-card-title">
                 <p className="user-card-name">{user.username}</p>
+                <p className="user-card-occupation">{user.occupation}</p>
+                <div className="card-social-icons">
+                    {console.log(user.socialMedia.platform)}
+                    {user.socialMedia.map((social) => (
+                        social.platform === 'LinkedIn' && (
+                            <a key={social._id} target='blank' rel='noreferer noopener' href={social.url}>
+                                <FaLinkedin />
+                            </a>
+
+                        )
+                    ))}
+                </div>
             </div>
 
         </>
