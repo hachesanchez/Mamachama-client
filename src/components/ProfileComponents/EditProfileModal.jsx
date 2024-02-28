@@ -30,6 +30,8 @@ function EditProfileModal({ showModal, setShowModal, user, updateProfile }) {
                         description={user.description}
                         avatar={user.avatar}
                         relation={user.relation}
+                        occupation={user.occupation}
+                        socialMedia={user.socialMedia}
                         userID={user._id}
                         updateProfile={updateProfile}
                     />

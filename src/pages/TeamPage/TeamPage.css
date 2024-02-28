@@ -2,9 +2,15 @@
     padding-bottom: 70px;
 }
 
-.user-card-col {
-    align-items: center;
-    justify-content: center;
+.user-card-component {
     display: flex;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-card-col {
+    justify-content: center;
+    display: inline-block;
+    justify-items: center;
+    margin: 40px;
 }

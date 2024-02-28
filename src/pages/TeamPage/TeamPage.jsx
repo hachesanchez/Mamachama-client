@@ -42,13 +42,13 @@ function TeamPage() {
 
                     <TeamComponents />
 
-                    <Row className="user-card-component">
+                    <div className="user-card-component">
                         {mamachamaUsers?.map((user) => (
-                            <Col md={6} sm={12} className='user-card-col' >
+                            <div className='user-card-col' >
                                 <MamachamaCard key={user.id} user={user} />
-                            </Col>
+                            </div>
                         ))}
-                    </Row>
+                    </div>
 
                     <PartnerCards />
 

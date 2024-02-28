@@ -12,7 +12,14 @@ function SignupForm({ createUser }) {
         username: '',
         description: '',
         avatar: '',
-        relation: ''
+        relation: '',
+        occupation: '',
+        socialMedia: [
+            {
+                platform: "",
+                url: "",
+            }
+        ],
     })
 
 
@@ -34,7 +41,24 @@ function SignupForm({ createUser }) {
     }
 
 
-    const { email, password, username, description, avatar, relation } = signupData
+    const handleAddSocialMedia = () => {
+        setSignupData({
+            ...signupData,
+            socialMedia: [
+                ...signupData.socialMedia,
+                { platform: "", url: "" }
+            ]
+        });
+    }
+
+    const handleSocialMediaChange = (index, e) => {
+        const { value, name } = e.target;
+        const updatedSocialMedia = [...signupData.socialMedia];
+        updatedSocialMedia[index][name] = value;
+        setSignupData({ ...signupData, socialMedia: updatedSocialMedia });
+    }
+
+    const { email, password, username, description, avatar, relation, occupation, socialMedia } = signupData
 
 
     const handleFileUpload = e => {
@@ -49,6 +73,8 @@ function SignupForm({ createUser }) {
             })
             .catch(err => console.log(err))
     }
+
+
 
 
     return (
@@ -79,6 +105,11 @@ function SignupForm({ createUser }) {
                     <Form.Control type='file' onChange={handleFileUpload} />
                 </Form.Group>
 
+                <Form.Group className='mb-3' controlid='occupation'>
+                    <Form.Label className='signup-label'>Ocupación o puesto</Form.Label>
+                    <Form.Control type='text' value={occupation} name='occupation' onChange={handleInputChange} />
+                </Form.Group>
+
                 <Form.Group className='mb-3' controlid='description'>
                     <Form.Label className='signup-label'>Descripción</Form.Label>
                     <Form.Control as="textarea" rows={2} value={description} name='description' onChange={handleInputChange} />
@@ -93,6 +124,37 @@ function SignupForm({ createUser }) {
                         <option value="Partner">Socia</option>
                     </Form.Select>
                 </Form.Group>
+
+                {socialMedia.map((social, index) => (
+                    <Row key={index}>
+                        <Form.Group as={Col} className='mt-3' controlId={`platform-${index}`}>
+                            <Form.Label className='signup-label'>Plataforma</Form.Label>
+                            <Form.Select
+                                value={social.platform}
+                                name="platform"
+                                onChange={(e) => handleSocialMediaChange(index, e)}
+                            >
+                                <option value="">Escoge una opción...</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="YouTube">YouTube</option>
+                            </Form.Select>
+                        </Form.Group>
+                        <Form.Group as={Col} className=' mt-3' controlId={`url-${index}`}>
+                            <Form.Label className='signup-label'>URL</Form.Label>
+                            <Form.Control
+                                type='text'
+                                value={social.url}
+                                name='url'
+                                onChange={(e) => handleSocialMediaChange(index, e)}
+                            />
+                        </Form.Group>
+                    </Row>
+                ))}
+
+                <Button variant="outline-secondary mt-3" onClick={handleAddSocialMedia}>+</Button>
+
 
                 <div className="d-grid">
                     <Button variant="dark mt-4" type="submit">Registrar</Button>

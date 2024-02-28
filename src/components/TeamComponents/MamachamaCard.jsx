@@ -1,24 +1,34 @@
-import { Card } from 'react-bootstrap'
-import './MamachamaCard.css'
-import { useState } from 'react'
+import { useState } from 'react';
+import './MamachamaCard.css';
+import { Row } from 'react-bootstrap';
 
 function MamachamaCard({ user }) {
 
-    const [showCardInfo, setShowCardInfo] = useState()
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
 
-
         <>
-            <div className='user-card'>
+            <div className={`user-card ${isHovered ? 'hovered' : ''}`}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
 
-                <img src={user.avatar} alt={user.username} />
-                {/* <Card.Title>{user.username}</Card.Title> */}
-                {/* <Card.Text>{user.description}</Card.Text> */}
+                <div className="user-card-normal">
+                    <img className='user-card-avatar' src={user.avatar} alt={user.username} />
+                </div>
+
+                <div className="user-card-info">
+                    <p className="user-card-description">{user.description}</p>
+                </div>
 
             </div>
+            <div className="user-card-title">
+                <p className="user-card-name">{user.username}</p>
+            </div>
+
         </>
-    )
+    );
 }
 
-export default MamachamaCard
+export default MamachamaCard;

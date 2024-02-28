@@ -6,8 +6,8 @@ function TeamComponents() {
 
         <>
             <p className="page-subtitle">
-                Generamos, impulsamos y acompañamos procesos de desarrollo comunitario e
-                inclusión social a través del arte, la gastronomía intercultural y la formación en zonas rurales.
+                Nuestro equipo de trabajo se conforma por dos profesionales y se complementa
+                con una red de colaboraciones habituales.
             </p>
         </>
     )
