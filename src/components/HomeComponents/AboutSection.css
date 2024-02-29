@@ -49,3 +49,20 @@
     border: 1px solid #353535;
     background-color: #353535;
 }
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-blend-mode: multiply;
+}
+
+.about-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

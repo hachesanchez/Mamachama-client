@@ -1,7 +1,19 @@
-import './NewsSection.css'
 import imgEx from '../../assets/images/header-test.jpg'
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import './NewsSection.css'
+import { useNavigate } from 'react-router-dom';
 
 function NewsSection() {
+
+    const navigate = useNavigate()
+    const handleClick = () => { navigate('/hacemos/proyectos') }
+
+    const renderTooltip = (props) => (
+        <Tooltip id='arrow-tooltip' {...props}>
+            Acceder a todos los proyectos
+        </Tooltip>
+    )
 
     return (
 
@@ -16,13 +28,20 @@ function NewsSection() {
                     <img src={imgEx} alt="" />
                     <img src={imgEx} alt="" />
                     <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
+                </div>
 
+                <div className="news-seemore">
+                    <OverlayTrigger
+                        placement="auto" // Position to the left
+                        overlay={renderTooltip}
+                    >
+                        <Button variant='none'>
+                            <MdKeyboardDoubleArrowRight onClick={handleClick} />
+                        </Button>
+                    </OverlayTrigger>
                 </div>
             </div>
+
 
         </>
 

@@ -3,6 +3,7 @@ import weAreIcon from '../../assets/images/about-weare.jpg'
 import involvedIcon from '../../assets/images/about-involved.jpg'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import aboutBackgroud from '../../assets/images/backgroundEFEFEF.png'
 import './AboutSection.css'
 
 
@@ -11,7 +12,9 @@ function AboutSection() {
     return (
 
         <>
-
+            <div className="about-background">
+                <img src={aboutBackgroud} alt="About Section Background" />
+            </div>
             <Container>
                 <Row className='about-images'>
                     <Col md={4} sm={12} className="about-col">
