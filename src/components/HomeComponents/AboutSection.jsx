@@ -31,7 +31,8 @@ function AboutSection() {
                         <div className="about-item">
                             <Image src={weDoIcon} alt='What we do Icon' />
                             <p className="about-text">
-                                Generamos, impulsamos y acompañamos procesos de desarrollo comunitario e inclusión social.
+                                Generamos, impulsamos y acompañamos procesos de desarrollo comunitario e inclusión social
+                                basados en una metodología participativa.
                             </p>
                             <Link to={'/hacemos'}>
                                 <p className='about-link'>HACEMOS</p>

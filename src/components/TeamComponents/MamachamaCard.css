@@ -63,7 +63,8 @@
 
 .user-card-occupation {
     color: #380A0D;
-    margin-bottom: 3px
+    margin-bottom: 3px;
+    text-transform: uppercase
 }
 
 .card-social-icons svg {

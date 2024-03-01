@@ -14,14 +14,19 @@
     margin: 40px;
 }
 
+.collaborator-card-component {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .collaborators-section {
     background-color: #c270755d;
     padding: 30px;
 }
 
 .collaborators-container {
-
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -37,4 +42,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.collab-card-col {
+    margin: 5px 5px 5px 5px;
 }

@@ -1,9 +1,9 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 import MamachamaCard from '../../components/TeamComponents/MamachamaCard'
 import userService from '../../services/user.services'
 import { useEffect, useState } from 'react'
 import './TeamPage.css'
-import CollaboratorCards from '../../components/TeamComponents/CollaboratorCards'
+import CollaboratorCard from '../../components/TeamComponents/CollaboratorCard'
 
 function TeamPage() {
 
@@ -76,7 +76,7 @@ function TeamPage() {
                         <div className="collaborator-card-component">
                             {collaboratorUsers?.map((CollabUser) => (
                                 <div className="collab-card-col">
-                                    <CollaboratorCards key={CollabUser.id} user={CollabUser} />
+                                    <CollaboratorCard key={CollabUser.id} user={CollabUser} />
                                 </div>
                             ))}
                         </div>

@@ -12,7 +12,7 @@ function HomePage() {
         ,
     });
     const parallaxAbout = useParallax({
-        speed: 60,
+        speed: 30,
     });
 
     const parallaxNews = useParallax({
