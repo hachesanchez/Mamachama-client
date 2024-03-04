@@ -1,36 +1,56 @@
-import { Col, Row } from 'react-bootstrap'
 import { useState } from 'react';
-import './CollaboratorCard.css'
+import { useNavigate } from 'react-router-dom'
+import './CollaboratorCard.css';
+import ReactCardFlip from 'react-card-flip'
 
 function CollaboratorCard({ user }) {
 
-    const [isHovered, setIsHovered] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false)
 
+    const handleMouseEnter = () => {
+        setIsFlipped(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsFlipped(false);
+    };
+
+    const navigate = useNavigate()
+
+    const handleCardClick = () => {
+        console.log('mecliko')
+        navigate('/')
+    }
 
     return (
-
         <>
-            <div className={`colaborator-card ${isHovered ? 'hovered' : ''}`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+            <div className="collaboratorCard"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={handleCardClick}
             >
-                <div className="collaborator-card">
-                    <img className='collaborator-card-avatar' src={user.avatar} alt={user.username} />
-                </div>
+                <ReactCardFlip
+                    flipDirection='horizontal'
+                    isFlipped={isFlipped}
+                    onMouseEnter={() => setIsFlipped(true)}
+                    onMouseLeave={() => setIsFlipped(false)}
 
-                <div className="collaborator-card-info">
-                    <p className="collaborator-card-name">
-                        {user.username}
-                    </p>
-                    <p className="collaborator-card-occupation">
-                        {user.occupation}
-                    </p>
-                </div>
+                >
+                    <div className="collaboratorCard">
+                        <img className="collaborator-avatar" src={user.avatar} alt="" />
+                    </div>
+
+                    <div className="collaboratorCard back">
+                        <img className="collaborator-avatar-back" src={user.avatar} alt="" />
+                        <div className="collaborator-info">
+                            <p className="collaborator-card-name">{user.username}</p>
+                            <p className="collaborator-card-occupation">{user.occupation}</p>
+                        </div>
+                    </div>
+                </ReactCardFlip>
             </div>
-
-
         </>
     )
 }
 
-export default CollaboratorCard
+export default CollaboratorCard;

@@ -1,35 +1,83 @@
-.collaborator-card {
-    display: inline-block;
+.collaboratorCard {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+}
+
+.collaborator-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back {
+    color: white;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+.collaborator-avatar-back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
     position: relative;
 }
 
-.collaborator-card-avatar {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    opacity: 0.7;
-    /* Ajusta la opacidad según sea necesario */
-}
-
-.collaborator-card-info {
+.collaborator-info {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Fondo semi-transparente para mejorar la legibilidad */
-    padding: 5px 10px;
-    /* Ajusta el relleno según sea necesario */
-    border-radius: 5px;
-    /* Ajusta el radio de borde según sea necesario */
+    top: 60%;
+    left: 20%;
 }
 
 .collaborator-card-name {
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+    font-size: 1.1em;
+}
+
+/* .collaborator-card-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.collaborator-card-avatar {
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.collaborator-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.collaborator-card-name,
+.collaborator-card-occupation {
+    margin: 0;
+    color: white;
+}
+
+.collaborator-card-name {
+    font-weight: bold;
 }
 
 .collaborator-card-occupation {
-    text-transform: uppercase;
-    font-size: 12px;
-    /* Ajusta el tamaño de fuente según sea necesario */
+    font-style: italic;
 }
+
+.collaborator-card-container:hover .collaborator-card-info {
+    opacity: 1;
+} */

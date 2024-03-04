@@ -2,8 +2,8 @@ import { Container, Row, Col, Card } from 'react-bootstrap'
 import MamachamaCard from '../../components/TeamComponents/MamachamaCard'
 import userService from '../../services/user.services'
 import { useEffect, useState } from 'react'
-import './TeamPage.css'
 import CollaboratorCard from '../../components/TeamComponents/CollaboratorCard'
+import './TeamPage.css'
 
 function TeamPage() {
 
@@ -67,23 +67,21 @@ function TeamPage() {
                 </div>
 
                 <div className="collaborators-section">
-                    <Container className='collaborators-container'>
-                        <h2 className='mt-4 mb-3 collaborators-title'>Red de colaboraciones</h2>
-                        <p className='collaborators-body'>
+                    <Container className="collaborators-container">
+                        <h2 className="mt-4 mb-3 collaborators-title">Red de colaboraciones</h2>
+                        <p className="collaborators-body">
                             Colaboramos con un red de profesionales que se han comprometido con los objetivos y fines de la asociación,
                             aportando su tiempo, recursos y conocimientos en distintos ámbitos y ejes de actuación.
                         </p>
-                        <div className="collaborator-card-component">
+                        <Row className="collaborator-card-component">
                             {collaboratorUsers?.map((CollabUser) => (
-                                <div className="collab-card-col">
-                                    <CollaboratorCard key={CollabUser.id} user={CollabUser} />
-                                </div>
+                                <Col xs={6} sm={4} md={3} lg={3} className='mb-3 mt-3' key={CollabUser.id}>
+                                    <CollaboratorCard user={CollabUser} />
+                                </Col>
                             ))}
-                        </div>
+                        </Row>
                     </Container>
-
                 </div>
-
 
             </div>
         </>

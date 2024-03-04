@@ -1,6 +1,6 @@
-.Team {
+/* .Team {
     padding-bottom: 70px;
-}
+} */
 
 .user-card-component {
     display: flex;
@@ -14,20 +14,14 @@
     margin: 40px;
 }
 
-.collaborator-card-component {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .collaborators-section {
     background-color: #c270755d;
-    padding: 30px;
 }
 
 .collaborators-container {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1100px;
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 
 .collaborators-title {
@@ -39,11 +33,9 @@
 }
 
 .collaborators-body {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    padding: 30px;
 }
 
-.collab-card-col {
-    margin: 5px 5px 5px 5px;
+.collaborator-card-component {
+    text-align: center;
 }
