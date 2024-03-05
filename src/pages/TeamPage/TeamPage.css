@@ -24,6 +24,11 @@
     padding-bottom: 70px;
 }
 
+.collaborator-card-col {
+    display: flex;
+    justify-content: center;
+}
+
 .collaborators-title {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;

@@ -10,15 +10,15 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    width: 380px;
-    height: 380px;
+    width: 350px;
+    height: 350px;
 }
 
 
 .user-card img {
     transition: filter 0.2s ease-in-out;
-    width: 380px;
-    height: 380px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 

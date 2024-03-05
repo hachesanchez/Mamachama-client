@@ -75,7 +75,7 @@ function TeamPage() {
                         </p>
                         <Row className="collaborator-card-component">
                             {collaboratorUsers?.map((CollabUser) => (
-                                <Col xs={6} sm={4} md={3} lg={3} className='mb-3 mt-3' key={CollabUser.id}>
+                                <Col sm={6} md={4} lg={3} className='mb-3 mt-3 collaborator-card-col' key={CollabUser.id}>
                                     <CollaboratorCard user={CollabUser} />
                                 </Col>
                             ))}
