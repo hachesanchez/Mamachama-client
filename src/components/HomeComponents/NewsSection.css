@@ -4,8 +4,9 @@
 }
 
 .news-title {
-    text-align: center;
     margin-bottom: 30px;
+    font-size: 90px;
+    margin-left: 20px;
 }
 
 .news-cards {
@@ -13,7 +14,7 @@
 }
 
 .news-cards img {
-    width: 700px;
+    width: 680px;
     margin: 10px;
 }
 
@@ -29,7 +30,7 @@
     height: auto;
 }
 
-@media(max-width:776px) {
+@media(max-width:991px) {
     .news-seemore {
         display: flex;
         justify-content: right;
@@ -39,6 +40,13 @@
     .news-cards img {
         width: 320px;
         margin: 10px;
+    }
+
+    .news-title {
+        margin-bottom: 30px;
+        font-size: 40px;
+        text-align: center;
+        margin-left: 0px
     }
 }
 

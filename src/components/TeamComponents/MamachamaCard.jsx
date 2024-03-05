@@ -28,7 +28,6 @@ function MamachamaCard({ user }) {
                 <p className="user-card-name">{user.username}</p>
                 <p className="user-card-occupation">{user.occupation}</p>
                 <div className="card-social-icons">
-                    {console.log(user.socialMedia.platform)}
                     {user.socialMedia.map((social) => (
                         social.platform === 'LinkedIn' && (
                             <a key={social._id} target='blank' rel='noreferer noopener' href={social.url}>

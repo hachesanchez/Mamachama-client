@@ -1,0 +1,36 @@
+.wedocards-row {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.wedocards {
+    padding: 30px;
+}
+
+.wedocards-title {
+    color: #474747;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.wedocards-carousel {
+    max-width: 900px;
+}
+
+.wedocards-carousel img {
+    width: 900px;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .wedocards-carousel img {
+        width: auto;
+        height: 300px;
+        object-fit: cover;
+    }
+}

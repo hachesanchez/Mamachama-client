@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import MamachamaCard from '../../components/TeamComponents/MamachamaCard'
 import userService from '../../services/user.services'
 import CollaboratorCard from '../../components/TeamComponents/CollaboratorCard'
-import './TeamPage.css'
 import PartnerCard from '../../components/TeamComponents/PartnerCard'
+import './TeamPage.css'
 
 function TeamPage() {
 
@@ -70,7 +70,7 @@ function TeamPage() {
                         </p>
                         <div className="user-card-component">
                             {mamachamaUsers?.map((MamachamaUser) => (
-                                <div className='user-card-col' >
+                                <div className='user-card-col' key={MamachamaUser.id} >
                                     <MamachamaCard key={MamachamaUser.id} user={MamachamaUser} />
                                 </div>
                             ))}
@@ -104,7 +104,7 @@ function TeamPage() {
                             <Col sm={12} md={12} lg={6} >
                                 <div className='partner-card-component'>
                                     {partnerUsers?.map((partnerUser) => (
-                                        <PartnerCard user={partnerUser} />
+                                        <PartnerCard key={partnerUser.id} user={partnerUser} />
                                     ))}
                                 </div>
                             </Col>
