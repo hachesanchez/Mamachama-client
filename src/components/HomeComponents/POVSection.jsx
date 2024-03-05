@@ -14,7 +14,7 @@ function POVSection() {
                         <Col sm={12} md={12} lg={7} className='pov-image'>
                             <Image src={povImg} alt='Points of view' />
                         </Col>
-                        <Col sm={12} md={12} lg={5}>
+                        <Col sm={12} md={12} lg={5} className='pov-text'>
                             <p className="pov-card-title">
                                 Cultura comunitaria
                             </p>

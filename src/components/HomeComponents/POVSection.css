@@ -29,8 +29,13 @@
 
 @media (max-width: 599px) {
     .pov-section img {
-        max-width: 400px;
+        max-width: 250px;
         margin-bottom: 50px;
+        padding: 0px;
+    }
+
+    .pov-text {
+        padding: 30px;
     }
 }
 

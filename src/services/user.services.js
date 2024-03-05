@@ -36,6 +36,10 @@ class UserService {
         return this.api.get(`/getCollaborators`)
     }
 
+    getPartner() {
+        return this.api.get(`/getPartner`)
+    }
+
     // getUsersByRelation(relation) {
     //     return this.api.get(`/get${relation}`);
     // }

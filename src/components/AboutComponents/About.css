@@ -1,7 +1,7 @@
-.about-component {
+/* .about-component {
     background-color: white;
     margin-bottom: 70px;
-}
+} */
 
 /* .about-subtitle {
     margin-top: 20px;
@@ -18,6 +18,10 @@
     justify-items: center;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.about-cards {
+    padding: 30px;
 }
 
 .about-card-title {

@@ -1,0 +1,17 @@
+.partnerCard {
+    border: none;
+    border-radius: 0%;
+}
+
+.partner-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 7px;
+    filter: grayscale();
+}
+
+.partner-avatar:hover {
+    filter: none
+}

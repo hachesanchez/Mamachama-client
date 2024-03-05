@@ -1,19 +1,21 @@
 import { Container, Row, Col, Card } from 'react-bootstrap'
+import { useEffect, useState } from 'react'
 import MamachamaCard from '../../components/TeamComponents/MamachamaCard'
 import userService from '../../services/user.services'
-import { useEffect, useState } from 'react'
 import CollaboratorCard from '../../components/TeamComponents/CollaboratorCard'
 import './TeamPage.css'
+import PartnerCard from '../../components/TeamComponents/PartnerCard'
 
 function TeamPage() {
 
     const [mamachamaUsers, setMamachamaUser] = useState()
     const [collaboratorUsers, setCollaboratorUser] = useState()
-
+    const [partnerUsers, setPartnerUsers] = useState()
 
     useEffect(() => {
         loadMamachamaUsers()
         loadCollabUsers()
+        loadPartnerUsers()
     }, [])
 
 
@@ -39,6 +41,16 @@ function TeamPage() {
             })
     }
 
+    const loadPartnerUsers = () => {
+        userService
+            .getPartner()
+            .then(({ data }) => {
+                setPartnerUsers(data)
+            })
+            .catch((err) => {
+                console.log('Error fetching Collaborator users:', err)
+            })
+    }
 
 
     return (
@@ -81,6 +93,24 @@ function TeamPage() {
                             ))}
                         </Row>
                     </Container>
+                </div>
+
+                <div className="partner-section">
+                    <Container className="partner-container">
+                        <Row className="d">
+                            <Col sm={12} md={12} lg={6} >
+                                <h2 className="partner-title">Entidades financiadoras</h2>
+                            </Col>
+                            <Col sm={12} md={12} lg={6} >
+                                <div className='partner-card-component'>
+                                    {partnerUsers?.map((partnerUser) => (
+                                        <PartnerCard user={partnerUser} />
+                                    ))}
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+
                 </div>
 
             </div>

@@ -8,8 +8,7 @@ import './HomePage.css';
 
 function HomePage() {
     const parallaxHeader = useParallax({
-        speed: -5
-        ,
+        speed: -5,
     });
     const parallaxAbout = useParallax({
         speed: 30,
