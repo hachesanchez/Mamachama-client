@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function NewsSection() {
 
     const navigate = useNavigate()
-    const handleClick = () => { navigate('/hacemos/proyectos') }
+    const handleClick = () => { navigate('#') }
 
     const renderTooltip = (props) => (
         <Tooltip id='arrow-tooltip' {...props}>
@@ -32,7 +32,7 @@ function NewsSection() {
 
                 <div className="news-seemore">
                     <OverlayTrigger
-                        placement="auto" // Position to the left
+                        placement="auto"
                         overlay={renderTooltip}
                     >
                         <Button variant='none'>

@@ -1,103 +1,83 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { FaPlus, FaMinus } from 'react-icons/fa6'
 import Mediacion from '../../components/WeDoComponents/Mediacion'
-import Formacion from '../../components/WeDoComponents/Formacion'
 import Facilitacion from '../../components/WeDoComponents/Facilitacion'
-import WeDoCards from '../../components/WeDoComponents/WeDoCards'
-import { FaPlus, FaMinus } from "react-icons/fa6";
-
+import Formacion from '../../components/WeDoComponents/Formacion'
 import './WeDoPage.css'
+
 
 function WeDoPage() {
 
-    const [openSection, setOpenSection] = useState(true)
-    const [showMediacion, setShowMediaciacion] = useState(false)
+    const [showMediacion, setShowMediacion] = useState(false)
+    const [showFormacion, setShowFormacion] = useState(false)
+    const [showFacilitacion, setShowFacilitacion] = useState(false)
 
-    const handleSection = () => {
-        setOpenSection(!openSection)
+    const handleToggleMediacion = () => {
+        setShowMediacion(!showMediacion)
     }
-    const handleMediacion = () => {
-        setShowMediaciacion(!showMediacion)
-        setOpenSection(!openSection)
+    const handleToggleFormacion = () => {
+        setShowFormacion(!showFormacion)
+    }
+    const handleToggleFacilitacion = () => {
+        setShowFacilitacion(!showFacilitacion)
     }
 
 
     return (
-
-        <div className='weDo'>
+        <div className="weDo">
 
             <div className="page-title">
                 <h1 className="page-title-text">Lo que hacemos</h1>
             </div>
 
             <Container>
+
                 <p className="page-subtitle">
-                    Proponemos diferentes servicios basados en una
-                    metodología participativa e innovadora centrada en alcanzar soluciones creativas a las problemáticas contemporáneas.
+                    Proponemos diferentes servicios basados en una metodología participativa e innovadora
+                    centrada en alcanzar soluciones creativas a las problemáticas contemporáneas.
                 </p>
+
                 <Row className="wedo-section">
                     <Col>
-                        <p className="wedo-section-title">
-                            MEDIACIÓN
-                        </p>
+                        <p className="wedo-section-title">MEDIACIÓN</p>
                     </Col>
-                    <Col className='wedo-icon'>
-                        {openSection ?
-                            <FaPlus className='wedo-faplus' onClick={handleMediacion} />
-
-                            : <FaMinus className='wedo-faminus' onClick={handleSection} />
-                        }
-                        {console.log(openSection)}
+                    <Col className="wedo-icon" onClick={handleToggleMediacion}>
+                        {showMediacion ? <FaMinus className="wedo-faminus" /> : <FaPlus className="wedo-faplus" />}
                     </Col>
-                    <hr className='wedo-hr' />
                 </Row>
-                <Mediacion show={showMediacion} />
-            </Container>
-            {/*            
-    const [openSection, setOpenSection] = useState(true);
-            const [showMediacion, setShowMediacion] = useState(false);
-
-    const handleSection = () => {
-                setOpenSection(!openSection);
-    };
-
-    const handleMediacion = () => {
-                setShowMediacion(!showMediacion);
-    };
-
-            return (
-            <div className='weDo'>
-                <div className="page-title">
-                    <h1 className="page-title-text">Lo que hacemos</h1>
+                <div className={`wedo-section-content ${showMediacion ? 'show' : ''}`}>
+                    {showMediacion && <Mediacion show={showMediacion} />}
                 </div>
+                <hr className="wedo-hr" />
 
-                <Container>
-                    <p className="page-subtitle">
-                        Proponemos diferentes servicios basados en una
-                        metodología participativa e innovadora centrada en alcanzar soluciones creativas a las problemáticas contemporáneas.
-                    </p>
-                    <Row className="wedo-section">
-                        <Col>
-                            <p className="wedo-section-title">
-                                MEDIACIÓN
-                            </p>
-                        </Col>
-                        <Col className='wedo-icon' onClick={handleMediacion}>
-                            {openSection ? <FaPlus className='wedo-faplus' /> : <FaMinus className='wedo-faminus' />}
-                        </Col>
-                    </Row>
-                    <hr className='wedo-hr' />
-                    {showMediacion && <Mediacion />}
-                </Container>
-            </div>
-            ) */}
+                <Row className="wedo-section">
+                    <Col>
+                        <p className="wedo-section-title">FORMACIÓN</p>
+                    </Col>
+                    <Col className="wedo-icon" onClick={handleToggleFormacion}>
+                        {showFormacion ? <FaMinus className="wedo-faminus" /> : <FaPlus className="wedo-faplus" />}
+                    </Col>
+                </Row>
+                <div className={`wedo-section-content ${showFormacion ? 'show' : ''}`}>
+                    {showFormacion && <Formacion show={showFormacion} />}
+                </div>
+                <hr className="wedo-hr" />
 
-            {/* 
-                  <WeDoCards/>
-            <Formacion />
-            <Facilitacion /> 
-            */}
+                <Row className="wedo-section">
+                    <Col>
+                        <p className="wedo-section-title">FACILITACIÓN</p>
+                    </Col>
+                    <Col className="wedo-icon" onClick={handleToggleFacilitacion}>
+                        {showFacilitacion ? <FaMinus className="wedo-faminus" /> : <FaPlus className="wedo-faplus" />}
+                    </Col>
+                </Row>
+                <div className={`wedo-section-content ${showFacilitacion ? 'show' : ''}`}>
+                    {showFacilitacion && <Facilitacion show={showFacilitacion} />}
+                </div>
+                <hr className="wedo-hr" />
 
+            </Container>
         </div>
     )
 }

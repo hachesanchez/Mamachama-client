@@ -9,25 +9,29 @@ import WeDoImg4 from '../../assets/images/weDoImg4.jpg';
 
 function Mediacion() {
     return (
-        <div className="wedocards">
-            <Row className='wedocards-row'>
+        <div className="wedocards-container">
+            <div className="wedocards">
+                <Row className='wedocards-row'>
+                    <Col>
+                        <p className="wedocards-title">
+                            mediación cultural
+                        </p>
+                        <p className="wedocards-subtitle">
+                            Procesos orientados a mejorar las relaciones, promover la comunicación y favorecer la integración entre personas
+                            y grupos de diferentes culturas a través de metodologías artísticas y participativas.
+                        </p>
+                        <ul className="wedocards-body">
+                            <li>Producción de significados y narrativas junto a personas que sufren múltiples discriminaciones en entornos rurales. </li>
+                            <li>Programas de inclusión social y desarrollo comunitario a través del teatro, la escritura y las artes visuales.  </li>
+                            <li>Producción audiovisual y documental colaborativo.</li>
+                            <li>Laboratorios de creatividad y participación social.</li>
+                            <li>Diseño de programas que promuevan actitudes y comportamientos que rechacen la discriminación cultural y desarrollen relaciones interculturales igualitarias</li>
+                        </ul>
 
-                <Col>
-                    <p className="wedocards-title">
-                        Mediación cultural
-                    </p>
-                    <p className="wedocards-subtitle">
-                        Procesos orientados a mejorar las relaciones, promover la comunicación y favorecer la integración entre personas
-                        y grupos de diferentes culturas a través de metodologías artísticas y participativas.
-                    </p>
-                    <ul className="wedocards-body">
-                        <li>Producción de significados y narrativas junto a personas que sufren múltiples discriminaciones en entornos rurales. </li>
-                        <li>Programas de inclusión social y desarrollo comunitario a través del teatro, la escritura y las artes visuales.  </li>
-                        <li>Producción audiovisual y documental colaborativo.</li>
-                        <li>Laboratorios de creatividad y participación social.</li>
-                        <li>Diseño de programas que promuevan actitudes y comportamientos que rechacen la discriminación cultural y desarrollen relaciones interculturales igualitarias</li>
-                    </ul>
-                    <Carousel className='wedocards-carousel'>
+
+                        {/* TODO: Carousel????
+                        
+                        <Carousel className='wedocards-carousel'>
                         <Carousel.Item>
                             <Image src={WeDoImg1} alt="First slide" fluid />
                             <Carousel.Caption>
@@ -49,9 +53,10 @@ function Mediacion() {
                                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                    </Carousel>
-                </Col>
-            </Row>
+                    </Carousel> */}
+                    </Col>
+                </Row>
+            </div>
         </div>
     );
 }

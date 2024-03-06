@@ -12,9 +12,14 @@ function AboutPage() {
                 <div className="page-title">
                     <h1 className="page-title-text">Somos</h1>
                 </div>
-
                 <Container>
-                    <About />
+                    <p className="page-subtitle">
+                        Generamos, impulsamos y acompañamos procesos de desarrollo comunitario e
+                        inclusión social a través del arte, la gastronomía intercultural y la formación en zonas rurales.
+                    </p>
+                    <div className="about-component">
+                        <About />
+                    </div>
                 </Container>
             </div>
         </>

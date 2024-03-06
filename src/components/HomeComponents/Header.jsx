@@ -1,15 +1,29 @@
 import heroImg from '../../assets/images/mamachama-hero.jpeg'
+import { FaArrowDown } from "react-icons/fa6";
+import { useRef } from 'react';
 import './Header.css'
 
 function Header() {
 
-    return (
+    const headerMessageRef = useRef(null);
 
+    const scrollToMessage = () => {
+        if (headerMessageRef.current) {
+            window.scrollTo({
+                top: headerMessageRef.current.offsetTop - 30,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    return (
         <>
 
             <img className='hero-img' src={heroImg} alt="communitary work" />
-
-            <div className="header-message">
+            <div className='arrow-icon' onClick={scrollToMessage}>
+                <FaArrowDown className='arrow-icon' />
+            </div>
+            <div className="header-message" ref={headerMessageRef}>
                 <p className="header-message-title">
                     Somos Mamachama y esta es la primera frase que queremos que leas cuando llegas a nuestra web
                 </p>

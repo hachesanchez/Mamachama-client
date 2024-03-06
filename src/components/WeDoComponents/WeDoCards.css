@@ -1,13 +1,12 @@
-.wedocards-row {
+.wedocards-container {
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 40px;
+    justify-content: flex-end;
 }
+
 
 .wedocards {
     padding: 30px;
+    max-width: 600px;
 }
 
 .wedocards-title {

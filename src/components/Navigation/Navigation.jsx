@@ -55,25 +55,6 @@ function Navigation() {
 
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto main-links">
-
-                    {/* <div className="nav-link">
-                            <ScrollLink
-                                to="contact-section"
-                                smooth={true}
-                                duration={100}
-                                className="nav-link"
-                                style={{ cursor: 'pointer' }}
-                            >
-                                contacta
-                            </ScrollLink>
-                        </div> */}
-
-                    {/* <Link to="/somos" className="nav-link">
-                        <NavDropdown title="SOMOS" id="basic-nav-dropdown">
-                            <NavDropdown.Item as={Link} to="/somos/sobre-mamachama">Sobre Mamachama</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/somos/nuestro-equipo">Nuestro equipo</NavDropdown.Item>
-                        </NavDropdown>
-                    </Link> */}
                     <NavDropdown title="SOMOS" id="basic-nav-dropdown">
                         <NavDropdown.Item
                             as={Link}

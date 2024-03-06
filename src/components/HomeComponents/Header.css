@@ -1,8 +1,24 @@
 .hero-img {
-    max-height: 800px;
+    position: relative;
+    height: 800px;
     width: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    height: 60px;
+    width: 40px;
+    color: white
 }
 
 .header-message {
@@ -18,7 +34,7 @@
     font-family: 'Oswald', sans-serif;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 991px) {
     .header-message-title {
         font-size: 1.5em;
     }
@@ -27,5 +43,14 @@
         padding: 60px 60px 60px 60px;
         background-color: #F5BFC3;
         text-align: center;
+    }
+
+    .hero-img {
+        height: 700px;
+    }
+
+    .arrow-icon {
+        top: 45%;
+        left: 50%;
     }
 }

@@ -1,8 +1,8 @@
 import { Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import about1 from '../../assets/images/about-1.jpg';
-import about2 from '../../assets/images/about-2.jpg';
-import about3 from '../../assets/images/about-3.jpg';
+import about1 from '../../assets/images/about-1.png';
+import about2 from '../../assets/images/about-2.png';
+import about3 from '../../assets/images/about-3.png';
 import './About.css';
 
 
@@ -12,11 +12,6 @@ function About() {
     return (
 
         <>
-            <p className="page-subtitle">
-                Generamos, impulsamos y acompañamos procesos de desarrollo comunitario e
-                inclusión social a través del arte, la gastronomía intercultural y la formación en zonas rurales.
-            </p>
-
             <div className="about-cards">
 
                 <Row className='about-card-row'>
