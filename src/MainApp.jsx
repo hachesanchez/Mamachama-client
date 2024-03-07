@@ -14,8 +14,8 @@ function MainApp() {
         <ParallaxProvider>
           <Navigation />
           <AppRoutes />
-          <Footer />
         </ParallaxProvider>
+        <Footer />
       </ScrollToTop>
     </>
   )

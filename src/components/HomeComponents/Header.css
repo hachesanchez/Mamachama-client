@@ -8,7 +8,7 @@
 
 .arrow-icon {
     position: absolute;
-    top: 40%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -61,7 +61,7 @@
     }
 
     .arrow-icon {
-        top: 45%;
+        top: 75%;
         left: 50%;
     }
 }
