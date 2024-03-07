@@ -1,12 +1,11 @@
 .contact-form {
     max-width: 700px;
     padding: 30px;
-    background-color: rgb(225, 225, 225);
+    /* background-color: rgb(225, 225, 225); */
 }
 
 .form-label {
     font-weight: 500;
-    color: #888
 }
 
 .form-placeholder {
@@ -14,6 +13,21 @@
     font-size: 15px;
     color: #888;
     padding: 10px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #888;
+    border-radius: 0;
+    padding: 10px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #380A0D;
 }
 
 .check-label {
@@ -25,6 +39,7 @@
     color: #380A0D;
     display: inline-block;
     margin-top: 40px;
+    padding-left: 40px;
 }
 
 @media (max-width: 991px) {

@@ -8,8 +8,17 @@
     height: auto;
 }
 
+.about-icon {
+    height: 160px;
+    width: auto;
+}
+
 .about-col {
     border-bottom: 1
+}
+
+.about-text {
+    margin-top: 10px;
 }
 
 @media (max-width: 767px) {

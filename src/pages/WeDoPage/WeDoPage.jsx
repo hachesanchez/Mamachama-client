@@ -39,7 +39,7 @@ function WeDoPage() {
                 </p>
 
                 <Row className="wedo-section">
-                    <Col>
+                    <Col lg={{ offset: 1 }}>
                         <p className="wedo-section-title">MEDIACIÓN</p>
                     </Col>
                     <Col className="wedo-icon" onClick={handleToggleMediacion}>
@@ -52,7 +52,7 @@ function WeDoPage() {
                 <hr className="wedo-hr" />
 
                 <Row className="wedo-section">
-                    <Col>
+                    <Col lg={{ offset: 1 }}>
                         <p className="wedo-section-title">FORMACIÓN</p>
                     </Col>
                     <Col className="wedo-icon" onClick={handleToggleFormacion}>
@@ -65,7 +65,7 @@ function WeDoPage() {
                 <hr className="wedo-hr" />
 
                 <Row className="wedo-section">
-                    <Col>
+                    <Col lg={{ offset: 1 }}>
                         <p className="wedo-section-title">FACILITACIÓN</p>
                     </Col>
                     <Col className="wedo-icon" onClick={handleToggleFacilitacion}>

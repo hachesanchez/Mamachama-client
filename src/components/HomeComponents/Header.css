@@ -8,7 +8,7 @@
 
 .arrow-icon {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -22,25 +22,36 @@
 }
 
 .header-message {
-    padding: 200px 200px 200px 200px;
+    padding: 170px 200px 200px 200px;
     background-color: #F5BFC3;
     text-align: center;
 }
 
 .header-message-title {
-    font-size: 3.5em;
-    font-weight: bold;
+    font-size: 10.5em;
+    color: #474747;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header-message-body {
+    font-size: 34px;
     color: #474747;
     font-family: 'Oswald', sans-serif;
 }
 
 @media (max-width: 991px) {
     .header-message-title {
-        font-size: 1.5em;
+        font-size: 3.5em;
+    }
+
+    .header-message-body {
+        font-size: 20px;
+        color: #474747;
+        font-family: 'Oswald', sans-serif;
     }
 
     .header-message {
-        padding: 60px 60px 60px 60px;
+        padding: 150px 60px 150px 60px;
         background-color: #F5BFC3;
         text-align: center;
     }

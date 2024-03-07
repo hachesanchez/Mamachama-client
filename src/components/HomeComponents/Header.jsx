@@ -10,7 +10,7 @@ function Header() {
     const scrollToMessage = () => {
         if (headerMessageRef.current) {
             window.scrollTo({
-                top: headerMessageRef.current.offsetTop - 30,
+                top: headerMessageRef.current.offsetTop + 20,
                 behavior: 'smooth'
             });
         }
@@ -25,11 +25,11 @@ function Header() {
             </div>
             <div className="header-message" ref={headerMessageRef}>
                 <p className="header-message-title">
-                    Somos Mamachama y esta es la primera frase que queremos que leas cuando llegas a nuestra web
+                    bienvenida
                 </p>
                 <p className="header-message-body">
-                    aquí te meto un par de Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nobis facere quisquam earum. Nisi architecto doloremque blanditiis illo! Facilis culpa facere laudantium? Minima quidem nihil non aperiam similique repudiandae? Aperiam?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel sequi esse aspernatur.
+                    "Es alentador saber que el vaso sigue llenándose, pero la tarea continúa y no va a avanzar sola.
+                    Hay un espacio muy importante en los medios para cambiar la cultura. Pero las nuevas generaciones nos están dando razones para ser optimistas."
                 </p>
             </div>
 

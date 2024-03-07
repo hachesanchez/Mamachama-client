@@ -20,14 +20,16 @@ function ContactSection() {
         <>
             <div className="homepage-contact">
                 <Row>
-                    <Col md={3} sm={12} className="homepage-contact-title">
-                        <h1>
-                            ¿Hablamos?
-                        </h1>
+                    <Col sm={12} md={5} lg={{ span: 4, offset: 1 }}>
+                        <p className="contact-title">
+                            cuéntanos lo que te apetezca
+                        </p>
                     </Col>
-                    <Col md={9} sm={12}>
-                        <ContactForm handlePolicyModal={handlePolicyModal} />
-                        <PrivacyPolicyModal modalShow={modalShow} setModalShow={setModalShow} />
+                    <Col sm={12} md={7} lg={7}>
+                        <div className="mt-3 contact-form-component">
+                            <ContactForm handlePolicyModal={handlePolicyModal} />
+                            <PrivacyPolicyModal modalShow={modalShow} setModalShow={setModalShow} />
+                        </div>
                     </Col>
                 </Row>
             </div >

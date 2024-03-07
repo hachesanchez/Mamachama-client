@@ -1,0 +1,64 @@
+.invisibilizadas-buy-card {
+    display: flex;
+    align-items: center;
+}
+
+.invisibilizadas-book-render img {
+    width: 700px;
+    height: auto;
+}
+
+.invisibilizadas-body {
+    font-style: italic;
+    color: #474747;
+}
+
+.buy-link {
+    border: 1px solid #000000;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.buy-link:hover {
+    color: white;
+    border: 1px solid #353535;
+    background-color: #353535;
+}
+
+@media (max-width:1024px) {
+    .invisibilizadas-buy-card {
+        text-align: center;
+    }
+
+    .invisibilizadas-book-render img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .invisibilizadas-body {
+        padding: 20px;
+        text-align: left;
+    }
+}
+
+@media (max-width:770px) {
+    .invisibilizadas-book-render img {
+        width: 350px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .invisibilizadas-body {
+        padding: 20px;
+        text-align: left;
+    }
+
+    .invisibilizadas-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
