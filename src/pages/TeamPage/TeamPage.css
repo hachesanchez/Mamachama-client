@@ -31,7 +31,6 @@
 
 .collaborators-title {
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
     font-size: 106px;
     color: #947C80;
 }
@@ -63,14 +62,14 @@
 
 .partner-title {
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
     font-size: 56px;
+    margin: 30px 0 50px 0;
 }
 
 .partner-card-component {
     display: flex;
     align-items: center;
-    justify-content: start;
+    padding: 20px;
 }
 
 @media (max-width: 991px) {

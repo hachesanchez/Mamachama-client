@@ -4,8 +4,8 @@
 }
 
 .partner-avatar {
-    width: 100px;
-    height: 100px;
+    max-width: 130px;
+    max-height: auto;
     object-fit: cover;
     cursor: pointer;
     margin: 7px;

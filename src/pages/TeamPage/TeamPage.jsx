@@ -97,16 +97,18 @@ function TeamPage() {
 
                 <div className="partner-section">
                     <Container className="partner-container">
-                        <Row className="d">
-                            <Col sm={12} md={12} lg={6} >
+                        <Row className="">
+                            <Col sm={12} md={12} lg={12} >
                                 <h2 className="partner-title">Entidades financiadoras</h2>
                             </Col>
-                            <Col sm={12} md={12} lg={6} >
-                                <div className='partner-card-component'>
+                            <Col sm={12} md={12} lg={12} >
+                                <Row className='partner-card-component'>
                                     {partnerUsers?.map((partnerUser) => (
-                                        <PartnerCard key={partnerUser.id} user={partnerUser} />
+                                        <Col className='mb-3 mt-3 partner-card-col' key={partnerUser.id}>
+                                            <PartnerCard key={partnerUser.id} user={partnerUser} />
+                                        </Col>
                                     ))}
-                                </div>
+                                </Row>
                             </Col>
                         </Row>
                     </Container>
