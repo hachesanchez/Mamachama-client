@@ -39,8 +39,7 @@ function Footer() {
                         <p className="footer-title">Colabora</p>
                         <hr />
                         <div className="footer-links">
-                            <Link to='#'>Libro "Invisibilizadas"</Link>
-                            {/* <Link to={'/colabora/invisibilizadas'}>Libro "Invisibilizadas"</Link> */}
+                            <Link to={'/colabora/invisibilizadas'}>Libro "Invisibilizadas"</Link>
                             <br />
                             <Link to='#'>Catering saludable</Link>
                             {/* <Link to={'/colabora/catering'}>Catering saludable</Link> */}
