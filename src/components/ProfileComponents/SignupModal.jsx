@@ -1,5 +1,5 @@
 import { Modal } from 'react-bootstrap';
-import SignupForm from './Signupform';
+import SignupForm from './Signupform.css';
 
 
 function SignupModal({ showModal, setShowModal, handleAddUser }) {
