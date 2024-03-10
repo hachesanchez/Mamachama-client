@@ -1,15 +1,19 @@
 .header-grey {
-    height: 1100px;
+    margin-top: 100px;
+    height: 900px;
+    z-index: -1
 }
 
-@media (max-width:991px) {
+
+@media (max-width:1440px) {
     .header-grey {
         height: 900px;
     }
 }
 
-@media (max-width:1440px) {
+@media (max-width: 991px) {
     .header-grey {
-        height: 900px;
+        height: 500px;
+        /* Adjust the height as needed for mobile */
     }
 }

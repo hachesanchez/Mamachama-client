@@ -9,6 +9,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
     background-color: white;
     height: 70px;
+    z-index: 3;
 }
 
 .navbar-custom .navbar-brand {
