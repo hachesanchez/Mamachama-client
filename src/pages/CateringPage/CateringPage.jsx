@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CateringInfo from '../../components/CateringComponents/CateringInfo'
 import CateringPast from '../../components/CateringComponents/CateringPast'
-import { Container } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap'
 import ContactForm from '../../components/Contact/ContactForm'
 import PrivacyPolicyModal from '../../components/Contact/PrivacyPolicyModal'
 import './CateringPage.css'
@@ -13,7 +13,6 @@ function CateringPage() {
 
     const handleContactForm = () => {
         setShowContactForm(!showContactForm)
-        console.log(showContactForm)
     }
 
     const [modalShow, setModalShow] = useState(false)
@@ -34,17 +33,25 @@ function CateringPage() {
 
             <Container>
 
-                <CateringInfo />
-                <CateringPast />
-                <div className="catering-contact-section">
-
-                    <div className="contact-link" onClick={handleContactForm}>
-                        Quiero contratar el cátering saludable
-                    </div>
-                    <div className={`catering-contact-form ${showContactForm ? 'open' : ''}`}  >
-                        <ContactForm handlePolicyModal={handlePolicyModal} />
-                    </div>
+                <div className="catering-info-section">
+                    <CateringInfo />
                 </div>
+
+                <Row className='mt-4 catering-contact-past-section'>
+                    <Col md={6} lg={6}>
+                        <div className="catering-contact-section">
+                            <div className="contact-link" onClick={handleContactForm}>
+                                Quiero contratar el cátering saludable
+                            </div>
+                            <div className={`catering-contact-form ${showContactForm ? 'open' : ''}`}  >
+                                <ContactForm handlePolicyModal={handlePolicyModal} />
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md={6} lg={6}>
+                        <CateringPast />
+                    </Col>
+                </Row>
 
             </Container>
 

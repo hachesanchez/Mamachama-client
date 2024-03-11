@@ -45,7 +45,7 @@ function Navigation() {
             expanded={expanded}
         >
 
-            <Navbar.Brand as={Link} to={'/'} className='nav-brand'> MAMACHAMA </Navbar.Brand>
+            <Navbar.Brand as={Link} to={'/'} className='nav-brand' onClick={handleCloseNavbar}> MAMACHAMA </Navbar.Brand>
 
             <Navbar.Toggle
                 aria-controls="basic-navbar-nav"

@@ -1,0 +1,17 @@
+.catering-past-title {
+    color: #474747;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 1;
+}
+
+.catering-past-body {
+    color: #888;
+}
+
+@media (max-width:991px) {
+    .catering-past-title {
+        font-size: 46px;
+    }
+}

@@ -1,0 +1,44 @@
+.catering-info-img,
+.catering-info-img-sm {
+    display: flex;
+}
+
+.catering-info-img img,
+.catering-info-img-sm img {
+    max-height: 650px;
+}
+
+.catering-info-img-sm {
+    display: none;
+}
+
+@media (max-width: 1224px) {
+
+    .catering-info-img img,
+    .catering-info-img-sm img {
+        height: 500px;
+    }
+
+    .catering-info-img-sm {
+        display: flex;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .catering-info-img img,
+    .catering-info-img-sm img {
+        height: 500px;
+        margin-bottom: 30px;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .catering-info-img,
+    .catering-info-img-sm {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}

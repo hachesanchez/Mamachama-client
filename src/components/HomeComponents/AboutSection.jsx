@@ -49,7 +49,7 @@ function AboutSection() {
                                 <p className="about-text">
                                     Ponte en contacto con nosotras, haz una propuesta, sé voluntaria, contrata nuestro catering...
                                 </p>
-                                <Link to={'/colabora/'}>
+                                <Link to={'/colabora/invisibilizadas'}>
                                     <p className='about-link'>INVOLÚCRATE</p>
                                 </Link>
                             </div>

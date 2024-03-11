@@ -1,10 +1,17 @@
- .contact-link {
-     border: 1px solid #000000;
-     padding: 10px 20px 10px 20px;
+ .catering-info-section,
+ .catering-contact-past-section {
+     padding: 10px;
+ }
+
+ .catering-contact-past-section .contact-link {
+     border: 1px solid #F5BFC3;
+     background-color: #F5BFC3;
+     padding: 30px 20px 30px 20px;
      display: inline-block;
      color: black;
      font-family: 'Roboto Condensed', sans-serif;
      cursor: pointer;
+     font-size: 1.2em;
  }
 
  .contact-link:hover {
@@ -14,10 +21,6 @@
  }
 
 
- .catering-contact-section {
-     margin: 40px 0 70px 10px
- }
-
  .catering-contact-form {
      max-height: 0;
      overflow: hidden;
@@ -26,4 +29,12 @@
 
  .catering-contact-form.open {
      max-height: 500px;
+ }
+
+ @media (max-width:991px) {
+     .catering-contact-past-section .contact-link {
+         margin: 40px 0 40px 0;
+         display: flex;
+         justify-content: center;
+     }
  }
