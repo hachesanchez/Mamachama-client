@@ -13,7 +13,7 @@ function AboutSection() {
     return (
 
         <>
-            <div className="about">
+            <div className="about-section-margin">
 
 
                 <div className="about-background">
