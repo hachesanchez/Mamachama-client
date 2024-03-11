@@ -1,0 +1,29 @@
+ .contact-link {
+     border: 1px solid #000000;
+     padding: 10px 20px 10px 20px;
+     display: inline-block;
+     color: black;
+     font-family: 'Roboto Condensed', sans-serif;
+     cursor: pointer;
+ }
+
+ .contact-link:hover {
+     color: white;
+     border: 1px solid #353535;
+     background-color: #353535;
+ }
+
+
+ .catering-contact-section {
+     margin: 40px 0 70px 10px
+ }
+
+ .catering-contact-form {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.6s ease-in-out;
+ }
+
+ .catering-contact-form.open {
+     max-height: 500px;
+ }

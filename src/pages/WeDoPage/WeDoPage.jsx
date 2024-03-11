@@ -47,7 +47,7 @@ function WeDoPage() {
                     </Col>
                 </Row>
                 <div className={`wedo-section-content ${showMediacion ? 'show' : ''}`}>
-                    {showMediacion && <Mediacion show={showMediacion} />}
+                    <Mediacion show={showMediacion} />
                 </div>
                 <hr className="wedo-hr" />
 
@@ -60,7 +60,7 @@ function WeDoPage() {
                     </Col>
                 </Row>
                 <div className={`wedo-section-content ${showFormacion ? 'show' : ''}`}>
-                    {showFormacion && <Formacion show={showFormacion} />}
+                    <Formacion show={showFormacion} />
                 </div>
                 <hr className="wedo-hr" />
 
@@ -73,7 +73,7 @@ function WeDoPage() {
                     </Col>
                 </Row>
                 <div className={`wedo-section-content ${showFacilitacion ? 'show' : ''}`}>
-                    {showFacilitacion && <Facilitacion show={showFacilitacion} />}
+                    <Facilitacion show={showFacilitacion} />
                 </div>
                 <hr className="wedo-hr" />
 
