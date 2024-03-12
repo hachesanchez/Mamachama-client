@@ -51,9 +51,11 @@ function Profile({ user, updateProfile, logout, userList, updateUserList, handle
                                 <Button className="profile-button" variant="outline-secondary" onClick={handleOpenEditProfileModal}>
                                     Editar perfil
                                 </Button>
-                                <Button className="profile-button" variant="outline-secondary">
-                                    Proyecto nuevo
-                                </Button>
+                                {user.relation !== 'Partner' &&
+                                    <Button className="profile-button" variant="outline-secondary">
+                                        Proyecto nuevo
+                                    </Button>
+                                }
                                 {user.relation === 'Team Mamachama' &&
                                     <> <Button className="profile-button" variant="outline-secondary" onClick={handleOpenSignupModal}>
                                         Añadir usuaria
