@@ -130,6 +130,11 @@ function Navigation() {
                             </NavDropdown>
                         </>
                     }
+                    {!user &&
+                        <>
+                            <Nav.Link as={Link} to={'/login'} className='nav-link' onClick={handleCloseNavbar}>login</Nav.Link>
+                        </>
+                    }
 
                 </Nav>
 
