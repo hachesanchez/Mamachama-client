@@ -11,6 +11,7 @@ import TeamPage from "../pages/TeamPage/TeamPage"
 import WeDoPage from "../pages/WeDoPage/WeDoPage"
 import InvisibilizadasPage from "../pages/InvisibilizadasPage/InvisibilizadasPage"
 import CateringPage from "../pages/CateringPage/CateringPage"
+import ProjectsPage from "../pages/ProjectsPage/ProjectsPage"
 
 function AppRoutes() {
 
@@ -24,6 +25,7 @@ function AppRoutes() {
             <Route path="/hacemos" element={<WeDoPage />} />
             <Route path="/colabora/invisibilizadas" element={<InvisibilizadasPage />} />
             <Route path="/colabora/catering" element={<CateringPage />} />
+            <Route path="/hacemos/proyectos" element={<ProjectsPage />} />
             <Route path="/contacta" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />

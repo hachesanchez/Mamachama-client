@@ -39,11 +39,7 @@ class UserService {
     getPartner() {
         return this.api.get(`/getPartner`)
     }
-
-    // getUsersByRelation(relation) {
-    //     return this.api.get(`/get${relation}`);
-    // }
-
+ 
     getProjectsByUserId(userId) {
         return this.api.get(`/getUserProjects/${userId}`);
     }

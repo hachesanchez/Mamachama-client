@@ -35,8 +35,9 @@
 }
 
 .user-card:hover .user-card-normal {
-    filter: blur(4px);
+    filter: blur(10px);
     cursor: pointer;
+    opacity: 0.3;
 }
 
 .user-card-info {
@@ -50,7 +51,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(92, 17, 22, 0.773);
+    background-color: #614b4d35;
     color: white;
     padding: 20px;
     box-sizing: border-box;

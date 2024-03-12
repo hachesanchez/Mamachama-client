@@ -1,12 +1,9 @@
 import { Container, Card, Button, Badge, Row, Col } from 'react-bootstrap'
+import { formatDate } from '../../utils/formatDate'
 import './MyProjects.css'
 
 function MyProjects({ user, projects }) {
 
-    function formatDate(dateString) {
-        const date = new Date(dateString)
-        return date.toLocaleDateString('es-ES')
-    }
 
     return (
 
