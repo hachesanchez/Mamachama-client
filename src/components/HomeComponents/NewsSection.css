@@ -15,7 +15,13 @@
 
 .news-cards img {
     width: 680px;
+    height: 500px;
+    object-fit: cover;
     margin: 10px;
+}
+
+.news-cards:hover img {
+    cursor: pointer;
 }
 
 .news-seemore {

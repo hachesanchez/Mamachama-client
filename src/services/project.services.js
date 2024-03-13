@@ -23,8 +23,12 @@ constructor() {
         return this.api.get(`/getAllProjects`);
     }
 
-      getOneProject(projectId) {
-        return this.api.get(`/getOneProject/${projectId}`);
+    getOneProject(projectId) {
+      return this.api.get(`/getOneProject/${projectId}`);
+    }
+    
+    getLatestProjects() {
+      return this.api.get(`/getLatestProjects`)
     }
 
       saveProject(projectData) {

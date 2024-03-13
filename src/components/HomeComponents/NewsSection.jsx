@@ -1,19 +1,23 @@
-import imgEx from '../../assets/images/header-test.jpg'
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import './NewsSection.css'
 import { useNavigate } from 'react-router-dom';
+import './NewsSection.css'
 
-function NewsSection() {
+function NewsSection({ latestProjects }) {
+
 
     const navigate = useNavigate()
-    const handleClick = () => { navigate('#') }
+
+    const handleClick = () => {
+        navigate('/hacemos/proyectos')
+    }
 
     const renderTooltip = (props) => (
         <Tooltip id='arrow-tooltip' {...props}>
             Acceder a todos los proyectos
         </Tooltip>
     )
+
 
     return (
 
@@ -24,10 +28,9 @@ function NewsSection() {
                     Últimos proyectos
                 </h1>
                 <div className="news-cards">
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
-                    <img src={imgEx} alt="" />
+                    {latestProjects.map(project => (
+                        <img src={project.featuredImage} />
+                    ))}
                 </div>
 
                 <div className="news-seemore">
@@ -41,8 +44,6 @@ function NewsSection() {
                     </OverlayTrigger>
                 </div>
             </div>
-
-
         </>
 
     )
