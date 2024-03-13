@@ -3,6 +3,7 @@ import { Button, Card, Row } from 'react-bootstrap'
 import projectService from '../../services/project.services'
 import { formatDate } from '../../utils/formatDate'
 import './ProjectCard.css'
+import Loader from '../Loader/Loader'
 
 function ProjectCard() {
 
@@ -30,7 +31,7 @@ function ProjectCard() {
 
             <Row className="projects-cards-row" >
 
-                {projects && projects?.map(project => (
+                {!projects ? <Loader /> : projects?.map(project => (
                     <Card
                         className={`project-card ${isHovered ? 'hovered' : ''}`}
                         key={project._id}

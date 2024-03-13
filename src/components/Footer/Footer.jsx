@@ -31,8 +31,7 @@ function Footer() {
                         <div className="footer-links">
                             <Link to={'/hacemos'}>¿Qué hacemos?</Link>
                             <br />
-                            <Link to='#'>Proyectos</Link>
-                            {/* <Link to={'/hacemos/proyectos'}>Proyectos</Link> */}
+                            <Link to={'/hacemos/proyectos'}>Proyectos</Link>
                         </div>
                     </Col>
                     <Col sm={12} md={3}>
@@ -41,8 +40,7 @@ function Footer() {
                         <div className="footer-links">
                             <Link to={'/colabora/invisibilizadas'}>Libro "Invisibilizadas"</Link>
                             <br />
-                            <Link to='#'>Catering saludable</Link>
-                            {/* <Link to={'/colabora/catering'}>Catering saludable</Link> */}
+                            <Link to={'/colabora/catering'}>Catering saludable</Link>
                         </div>
                     </Col>
                     <Col sm={12} md={3}>

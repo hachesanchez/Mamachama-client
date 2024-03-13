@@ -4,6 +4,7 @@ import MamachamaCard from '../../components/TeamComponents/MamachamaCard'
 import userService from '../../services/user.services'
 import CollaboratorCard from '../../components/TeamComponents/CollaboratorCard'
 import PartnerCard from '../../components/TeamComponents/PartnerCard'
+import Loader from '../../components/Loader/Loader'
 import './TeamPage.css'
 
 function TeamPage() {
@@ -69,7 +70,7 @@ function TeamPage() {
                             con una red de colaboraciones habituales.
                         </p>
                         <div className="user-card-component">
-                            {mamachamaUsers?.map((MamachamaUser) => (
+                            {!mamachamaUsers ? <Loader /> : mamachamaUsers.map((MamachamaUser) => (
                                 <div className='user-card-col' key={MamachamaUser.id} >
                                     <MamachamaCard key={MamachamaUser.id} user={MamachamaUser} />
                                 </div>
@@ -86,7 +87,7 @@ function TeamPage() {
                             aportando su tiempo, recursos y conocimientos en distintos ámbitos y ejes de actuación.
                         </p>
                         <Row className="collaborator-card-component">
-                            {collaboratorUsers?.map((CollabUser) => (
+                            {!collaboratorUsers ? <Loader /> : collaboratorUsers.map((CollabUser) => (
                                 <Col sm={6} md={4} lg={3} className='mb-3 mt-3 collaborator-card-col' key={CollabUser.id}>
                                     <CollaboratorCard user={CollabUser} />
                                 </Col>
@@ -103,7 +104,7 @@ function TeamPage() {
                             </Col>
                             <Col sm={12} md={12} lg={12} >
                                 <Row className='partner-card-component'>
-                                    {partnerUsers?.map((partnerUser) => (
+                                    {!partnerUsers ? <Loader /> : partnerUsers.map((partnerUser) => (
                                         <Col className='mb-3 mt-3 partner-card-col' key={partnerUser.id}>
                                             <PartnerCard key={partnerUser.id} user={partnerUser} />
                                         </Col>
