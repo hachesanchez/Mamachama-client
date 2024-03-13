@@ -26,10 +26,9 @@ function ProjectCard() {
 
 
     return (
-        <div>
+        <div  >
 
-            <Row sm={12} md={3} lg={3} className="my-projects-cards-row" >
-                {/* FRONT CARD */}
+            <Row className="projects-cards-row" >
 
                 {projects && projects?.map(project => (
                     <Card
@@ -46,13 +45,13 @@ function ProjectCard() {
                         <div className="project-card-back">
                             <Card.Body>
                                 <Card.Title className='project-card-title'>{project.title}</Card.Title>
-                                <Card.Text className='my-project-card-date'>
+                                <Card.Text className='project-card-date'>
                                     Publicado el <span>{formatDate(project.createdAt)}</span>
                                 </Card.Text>
-                                <Card.Text className='my-project-card-description'>
+                                <Card.Text className='project-card-description'>
                                     {project.description}
                                 </Card.Text>
-                                <Card.Text className='my-project-card-tags'>
+                                <Card.Text className='project-card-tags'>
                                     {project.tags && project.tags.map((tag, idx) => (
                                         <span key={idx}>
                                             #{tag}
