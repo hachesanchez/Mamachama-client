@@ -65,6 +65,7 @@ function Navigation() {
                         >
                             Sobre Mamachama
                         </NavDropdown.Item>
+                        <hr />
                         <NavDropdown.Item
                             as={Link}
                             to={'/somos/nuestro-equipo'}
@@ -85,6 +86,7 @@ function Navigation() {
                         >
                             ¿Qué hacemos?
                         </NavDropdown.Item>
+                        <hr />
                         <NavDropdown.Item
                             as={Link}
                             to={'/hacemos/proyectos'}
@@ -104,6 +106,7 @@ function Navigation() {
                         >
                             Libro "Invisibilizadas"
                         </NavDropdown.Item>
+                        <hr />
                         <NavDropdown.Item
                             as={Link}
                             to={'/colabora/catering'}
